@@ -1,0 +1,366 @@
+{% extends 'admin_base.html' %}
+{% block title %}Approvals{% endblock title %}
+{% block body %}
+<style>
+    .checked {
+        color: yellow;
+    }
+</style>
+
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Approvals</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Admin Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Seller & User Approvals<br>hloding approvals</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->
+
+
+
+
+<div class="panel panel-primary">
+    <div class="tab-menu-heading">
+        <div class="tabs-menu1">
+            <!-- Tabs -->
+            <ul class="nav panel-tabs" style="justify-content: center;">
+                <li class="mx-0"><a href="#tab5" class="active" data-bs-toggle="tab" id="request">User requests</a></li>
+                <li class="mx-0"><a href="#tab6" data-bs-toggle="tab" id="seller">Seller Posts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel-body tabs-menu-body p-0 pt-5">
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab5">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="row">
+                            {% for user_reqt in user_reqt %}
+                            <div class="col-md-12  col-xl-6">
+                                <div class="card">
+
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40"
+                                                alt="img" style="padding: 19px; margin-left: 12px;">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card">
+                                                <div class="card-body" style="margin-bottom: -45px;">
+                                                    <form class="form-horizontal">
+
+                                                        <div class="mb-1 row justify-content-end">
+                                                            <div class="col-md-3" style="font-size: 25px;">
+                                                                <span id=heart
+                                                                    style="display: flex; justify-content: flex-end;">
+                                                                    <i class="fa-brands fa-man-messenger"
+                                                                        aria-hidden="true"
+                                                                        style="display: flex; justify-content: flex-end;"></i>
+                                                                    <svg style="width: 32px;"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        viewBox="0 0 512 512">
+                                                                        <path
+                                                                            d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z" />
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class=" row mb-4">
+                                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; Kristina</h5>
+                                                        </div>
+                                                        <div class=" row mb-4">
+                                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp;
+                                                                naresh@gmail.com</h5>
+                                                        </div>
+                                                        <div class=" row mb-4">
+                                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <section style=" margin-left: 26px; width: 93%;">
+                                        <div class="my-5" style="margin-bottom: -0.5rem !important; margin-top: 0.5rem !important;">
+                                            <div class="card">
+                                                <div class="card-body" style="    border: 1px solid #6f6fa1; border-radius: 10px;">
+                                                    <form class="form-horizontal">
+
+                                                        <div class=" row mb-3">
+                                                            <h5><strong>Category&emsp;&emsp;</strong>  : &emsp; {{user_reqt.select_catgry}}</h5>
+                                                        </div>
+                                                        <div class=" row mb-3">
+                                                            <h5><strong>Title&emsp;&emsp;</strong> : &emsp;  {{user_reqt.title}}</h5>
+                                                        </div>
+                                                        <div class=" row mb-3">
+                                                            <h5><strong>When you required&emsp;&emsp;</strong> : &emsp; {{user_reqt.when_require}}</h5>
+                                                        </div>
+                                                        <div class=" row mb-3">
+                                                            <h5><strong>Description of requirement&emsp;&emsp;</strong> :</h5><div id="descri">
+                                                                {{user_reqt.description}} </div>
+                                                        </div>
+                                                
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <div
+                                        style="width: 100%; padding: 2px; background-color: blue; color: white; margin-bottom: -1px; margin-top: 15px;">
+                                        <h6 style="margin-top: 6px; margin-left: 17px;"><b>Posting Date & Time :-</b>
+                                        </h6>
+                                    </div>
+                                    <div style="margin-top: 13px;">
+                                        <div class="card border-0">
+                                            <div class="row">
+                                                <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-success mt-3"
+                                                        style=" padding: 9px 50px; background-color: green !important;">Approve</a>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-danger mt-3"
+                                                        style="padding: 9px 50px; background-color: red !important;">Reject</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tab-pane" id="tab6">
+                <section>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                {% for i, j in data %}
+    
+                                <div class="col-md-12  col-xl-6">
+                                    <div class="card" style="width: 95%;">
+                                        <div class="row bg-white" style="border-radius: 14px;">
+    
+    
+                                            <div class="fleg-img" style="padding: 0;">
+                                                <!-- <img src="/static/images/zx.png" alt=""> -->
+                                                <img src="/media/{{j.UploadAdsPhoto}}" style="    min-width: 100%;
+                                                height: 191px;
+                                                object-fit: cover;border-top-left-radius: 20px;border-top-right-radius: 20px;" alt="">
+                                            </div>
+                                            <div class="card flex-row"
+                                                style="background-color: #0f0fe4; border-radius: 0px;">
+                                                <p class=" mt-2 mb-2"
+                                                    style="color: yellow; font-style: italic; font-size: 15px;">
+                                                    Professional</p>
+    
+                                                <p class="text-white m-auto" style="font-size: 16px;">
+                                                    <strong>{{j.Catagery}}</strong></p>
+    
+                                                <div style="font-size: 17px; padding: 7px;">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+    
+                                                </div>
+    
+                                            </div>
+                                            <div class="card py-5 border-0 "
+                                                style="    margin-top: -23px; margin-bottom: 2px;">
+    
+                                                <div class="row  flex-nowrap">
+                                                    <div class="col-3">
+                                                        <img src="/media/{{i.ContactPersonPic}}"
+                                                            class="img-fluid rounded-start" alt="douryou thumbnail"
+                                                            style="width:100px ; height:100px;">
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <h4 class="card-text">{{j.DealTitle}}</h4>
+                                                        <h5 class="card-text">{{i.ContactPersonName}}</h5>
+                                                        <h6 class="card-text">{{i.CompanyAddress}}</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                style="width: 100%; padding: 2px; background-color: blue; color: white; margin-bottom: -1px; margin-top: 15px;">
+                                                <h6 style="margin-top: 6px; margin-left: 17px;"><b>Posting Date & Time :-
+                                                    </b>{{j.DealPostDateandTime}}</h6>
+                                            </div>
+                                            <div style="margin-top: 13px;">
+                                                <div class="card border-0">
+                                                    <div class="row">
+                                                        <div class="col-6 text-center">
+                                                            <form action="admin-aprove-seller-request/{{j.TodaysDealID}}"
+                                                                method="post">{% csrf_token %}
+                                                                <button onclick="approve()" class="btn btn-success mt-3" 
+                                                                    style=" padding: 9px 50px; background-color: green !important;">Approve</button>
+                                                              
+                                                                <!-- <input type="submit" class="btn btn-primary mb-1"
+                                                                    value="Approve"
+                                                                    style="padding: 9px 50px; background-color: #008e0c !important;"> -->
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-6 text-center">
+                                                            <form action="admin-reject-seller-request/{{j.TodaysDealID}}"
+                                                                method="post">{% csrf_token %}
+                                                                <button onclick="approve()" type="submit" class="btn btn-primary mt-3"
+                                                                    style="padding: 9px 50px; background-color: red!important;">Reject</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+    
+                            </div>
+    
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<script>
+    var hash = document.location.hash;
+    var hash = location.hash.replace(/^#/, '');
+    if(hash) {
+        $('.nav-tabs a [href="#'+hash+'"]').tab('show');
+    }
+    $('.nav-tabs a').on('shown.bs.tab', function (e){
+        window.location.hash = e.target.hash;
+    });
+
+document.addEventListener('DOMContentLoaded', function() {
+setTimeout(function() {
+
+jQuery(function($){
+
+let desktoptitles = $('.elementor-tab-desktop-title');
+let mobiletitles = $('.elementor-tab-mobile-title');
+
+let strings = ['?tab6',
+'?heythere',
+'?bonjour'
+];
+
+strings.forEach( (string,i) => {
+if (window.location.href.indexOf(string) > -1) {
+desktoptitles.eq(i).click();
+mobiletitles.eq(i).click();
+$('html, body').animate({
+scrollTop: desktoptitles.eq(i).offset().top - 100
+},'slow');
+} } );
+}); }, 1200); });
+</script> -->
+<!-- <script> -->
+<!-- //     const triggerTabList = document.querySelectorAll('#tab6 button')
+// triggerTabList.forEach(triggerEl => {
+//   const tabTrigger = new bootstrap.Tab(triggerEl)
+
+//   triggerEl.addEventListener('click', event => {
+//     event.preventDefault()
+//     tabTrigger.show()
+//   })
+// })
+// const triggerEl = document.querySelector('#tab6 button[data-bs-target="#tab6"]')
+// bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+
+// const triggerFirstTabEl = document.querySelector('#tab6  li:first-child button')
+// bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+// </script> -->
+<script>
+    // const tabButtons = document.querySelectorAll(".tab");
+    // const tabs = document.querySelectorAll(".tabShow");
+  
+    // const changeTab = (tabIndex) => {
+    //   sessionStorage.setItem('currentTab', tabIndex);
+  
+    //   tabs.forEach((node) => { node.style.display = "none"; });
+    //   tabButtons.forEach((tb) => tb.classList.remove('active'));
+  
+    //   tabs[tabIndex].style.display = "block";
+    //   tabButtons[tabIndex].classList.add('active');
+    // }
+  
+    // tabButtons.forEach((tabButton, index) => {
+    //   tabButton.onclick = () => changeTab(index)
+    // });
+  
+    // changeTab(sessionStorage.getItem('currentTab') || 0);
+
+
+
+
+//    let session_valeu= 
+
+document.getElementById("request").addEventListener("click", function(){ 
+    document.getElementById('tab5').style.display = "block";
+    localStorage.setItem("tab", false);
+   
+ });
+
+
+ document.getElementById("seller").addEventListener("click", function(){ 
+    document.getElementById('tab5').style.display = "none";
+    localStorage.setItem("tab", true);
+   
+ });
+
+
+ if(localStorage.getItem("tab2")){
+    // document.getElementById('seller').classList.remove("active");
+    // document.getElementById('tab6').style.display = "none";
+    // document.getElementById('tab5').classList.add("active");
+    // document.getElementById('request').classList.add("active");
+    // localStorage.removetem("tab2");
+    // localStorage.removetem("tab");
+}
+ 
+var tabvalue=localStorage.getItem("tab")
+if(tabvalue=="true"){
+        
+    document.getElementById('request').classList.remove("active");
+    document.getElementById('tab5').style.display = "none";
+    document.getElementById('tab6').classList.add("active");
+    document.getElementById('seller').classList.add("active");
+
+}
+
+
+function approve(){
+    
+    localStorage.setItem("tab", true);
+}
+
+  </script>
+{% endblock body %}

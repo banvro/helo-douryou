@@ -1,0 +1,73 @@
+{% extends 'seller_base.html' %} 
+
+
+{% block body %}
+<div class="app sidebar-mini ltr">
+
+    <!-- BACKGROUND-IMAGE -->
+    <div class="" style="  background-image: linear-gradient(to right, rgb(234, 76, 70),rgb(240, 116, 112),rgb(241, 149, 155));
+    ">
+
+        <!-- GLOABAL LOADER -->
+        <div id="global-loader">
+            <img src="/static/images/loader.svg" class="loader-img" alt="Loader">
+        </div>
+        <!-- /GLOABAL LOADER -->
+
+        <!-- PAGE -->
+        <div class="page">
+            <div class="">
+
+                <!-- CONTAINER OPEN -->
+                <div class="col col-login mx-auto mt-7">
+                    <div class="text-center">
+                        <img src="/static/images/brand/door-you-white.png" class="header-brand-img" alt="" height=207px width=55px  >
+                    </div>
+                </div>
+
+                <div class="container-login100">
+                    <div class="wrap-login100 p-6" style='margin-top: -74px;'>
+                        <form class="login100-form validate-form" method="post" action="seller-login">
+                            {% csrf_token %}
+                            <span class="login100-form-title pb-5">
+                                Login/Signup
+                            </span>
+                            <div class="panel panel-primary">
+                               
+                                <!-- <div class="panel-body tabs-menu-body p-0 pt-5"> -->
+                                     
+                                        
+                                        <div>
+                                            <div id="mobile-num" class="wrap-input100 validate-input input-group mb-4">
+                                                <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                                                    <span>+91</span>
+                                                </a>
+                                                <input class="input100 border-start-0 form-control ms-0" type="number" name="phone_number">
+                                            </div>
+                                            <div id="mobile-num" class="wrap-input100 validate-input input-group mb-4">
+                                                <input class="" type="hidden" name="password" id="password" value="komalkagra">
+                                            </div>
+                                           
+                                            <span>Note : Login with registered mobile number to generate OTP.</span>
+
+                                            <div class="container-login100">
+                                               
+                                                    <button class="btn btn-primary" type="submit"> Proceed</button>
+                                                
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <!-- CONTAINER CLOSED -->
+            </div>
+        </div>
+        <!-- End PAGE -->
+
+    </div>
+</div>
+
+{% endblock body %}

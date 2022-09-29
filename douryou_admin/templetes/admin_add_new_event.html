@@ -1,0 +1,101 @@
+{% extends 'admin_base.html' %}
+{% block title %}Add New Events{% endblock title %}
+{% block body %}
+<style>
+
+    section{
+        padding: 50px 0;
+    }
+.col-form{
+    position: relative;
+    max-width: 100%;
+    min-height: 80px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 10px 50px 0 15px;
+}
+
+.col-form input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+</style>
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Add New Events</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Admin Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add New Events</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->    
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-12">
+                <div class="card">
+  
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Event Name">
+                    </div>
+
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Event Type">
+
+                    </div>
+                    <div class="col-form mt-5">
+                        <input type="text" placeholder="Event Category">
+                    </div>
+
+
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Event Length">
+                    </div>
+
+
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Event Date">
+                    </div>
+
+
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Event Time">
+                    </div>
+
+
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Event Address">
+                    </div>
+
+
+                    <div class="col-form mt-5" >
+                        <input type="text" placeholder="Entry fees">    
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                    <button type="button" class="btn btn-primary btn-lg mx-5" style="padding:12px 50px ;">Go back</button>
+                    <button type="button" class="btn btn-secondary btn-lg mx-5"  style="padding:12px 50px ;">Submit</button>
+                    </div>
+
+
+                </div>
+            </div>
+            
+            
+            
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock body %}

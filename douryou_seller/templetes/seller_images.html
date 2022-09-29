@@ -1,0 +1,438 @@
+{% extends 'createprofile_base.html' %}
+{% block title %}Create Company Profile{% endblock title %}
+{% block body %}
+<!--Row open-->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header border-bottom-0">
+                <h3 class="card-title">Enter Company Details..</h3>
+            </div>
+            <form method="POST" action= "seller-create-profile-company-images" id="myForm" enctype="multipart/form-data">
+                {% csrf_token %}
+            <div class="card-body">
+                <div id="smartwizard-3">
+                    <ul>
+                        <li><a href="#step-20">Images Section/ create your company profile</a></li>
+                        <li><a href="#step-21">Upload Your Certificates</a></li>
+                        <li><a href="#step-22">Upload Your Previous Results</a></li>
+                        <li><a href="#step-23">Upload Your Customer’s Reviews?</a></li>
+                    </ul>
+                    
+                    <div>
+                        <div id="step-20" class="">
+                            <div class="form-horizontal" style="padding-left: 10%; padding-right: 10%;">
+
+                                <div class="row mb-5">
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic1" id="office_pic1" data-bs-height="180" required />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic2" id="office_pic2" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic3" id="office_pic3" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic4" id="office_pic4" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic5" id="office_pic5" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic6" id="office_pic6" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic7" id="office_pic7" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic8" id="office_pic8" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic9" id="office_pic9" data-bs-height="180" />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic10" id="office_pic10" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic11" id="office_pic11" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_pic12" id="office_pic12" data-bs-height="180"  />
+                                    </div>
+                                    
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        <div id="step-21" class="">
+                            <div class="form-horizontal" style="padding-left: 10%; padding-right: 10%;">
+                                <div class="row mb-5">
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte1" id="office_certificatte1" data-bs-height="180" required />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte2" id="office_certificatte2" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte3" id="office_certificatte3" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte4" id="office_certificatte4" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte5" id="office_certificatte5" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte6" id="office_certificatte6" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte7" id="office_certificatte7" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte8" id="office_certificatte8" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte9" id="office_certificatte9" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte10" id="office_certificatte10" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte11" id="office_certificatte11" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_certificatte12" id="office_certificatte12" data-bs-height="180"  />
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div id="step-22" class="">
+                            <div class="form-horizontal" style="padding-left: 10%; padding-right: 10%;">
+                                <div class="row mb-5">
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result1" id="office_prev_result1" data-bs-height="180" required />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result2" id="office_prev_result2" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result3" id="office_prev_result3" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result4" id="office_prev_result4" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result5" id="office_prev_result5" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result6" id="office_prev_result6" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result7" id="office_prev_result7" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result8" id="office_prev_result8" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result9" id="office_prev_result9" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result10" id="office_prev_result10" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result11" id="office_prev_result11" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_prev_result12" id="office_prev_result12" data-bs-height="180"  />
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step-23" class="">
+                            <div class="row mt-4" style="padding-left: 12%;
+                            padding-right: 12%;">
+                                <div class="row mb-5">
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic1" id="office_custmer_reviews_pic1" data-bs-height="180" required />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic2" id="office_custmer_reviews_pic2" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic3" id="office_custmer_reviews_pic3" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic4" id="office_custmer_reviews_pic4" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic5" id="office_custmer_reviews_pic5" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic6" id="office_custmer_reviews_pic6" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic7" id="office_custmer_reviews_pic7" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic8" id="office_custmer_reviews_pic8" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic9" id="office_custmer_reviews_pic9" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic10" id="office_custmer_reviews_pic10" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic11" id="office_custmer_reviews_pic11" data-bs-height="180"  />
+                                    </div>
+                                    <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                        <input type="file" class="dropify" name="office_custmer_reviews_pic12" id="office_custmer_reviews_pic12" data-bs-height="180"  />
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <a class="btn btn-primary" style="
+                    display: block;
+                    margin-left: 30%;
+                    margin-right: 30%;" type="submit" value="send">Subbmit </a> -->
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--row closed-->
+{% endblock body %}
+
+
+
+
+
+
+
+<!-- 
+
+<style>
+    @media (min-width: 768px){
+    .wizard.vertical>.actions {
+    /* width: 85%; */
+    display: flex;
+    justify-content: center;
+}}
+</style>
+
+<div class="row ">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header border-bottom-0">
+                <div class="card-title">
+                    Images Section/ create your company profile
+                </div>
+            </div>
+            <form method="POST" action= "seller-create-profile-company-images" id="myForm" enctype="multipart/form-data">
+                {% csrf_token %}
+            <div class="card-body">
+                <div id="wizard3">
+                    <h3>Upload Your Office Pics</h3>
+                    <section>
+
+                        <div class=" card-body">
+                            <div class="row mb-5">
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic1" id="office_pic1" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic2" id="office_pic2" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic3" id="office_pic3" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic4" id="office_pic4" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic5" id="office_pic5" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic6" id="office_pic6" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic7" id="office_pic7" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic8" id="office_pic8" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic9" id="office_pic9" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic10" id="office_pic10" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic11" id="office_pic11" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_pic12" id="office_pic12" data-bs-height="180" required />
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <h3>Upload Your Certificates</h3>
+                    <section>
+                        <div class=" card-body">
+                            <div class="row mb-5">
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte1" id="office_certificatte1" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte2" id="office_certificatte2" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte3" id="office_certificatte3" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte4" id="office_certificatte4" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte5" id="office_certificatte5" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte6" id="office_certificatte6" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte7" id="office_certificatte7" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte8" id="office_certificatte8" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte9" id="office_certificatte9" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte10" id="office_certificatte10" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte11" id="office_certificatte11" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_certificatte12" id="office_certificatte12" data-bs-height="180" required />
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <h3>Upload Your Previous Results</h3>
+                    <section>
+                        <div class=" card-body">
+                            <div class="row mb-5">
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result1" id="office_prev_result1" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result2" id="office_prev_result2" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result3" id="office_prev_result3" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result4" id="office_prev_result4" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result5" id="office_prev_result5" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result6" id="office_prev_result6" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result7" id="office_prev_result7" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result8" id="office_prev_result8" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result9" id="office_prev_result9" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result10" id="office_prev_result10" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result11" id="office_prev_result11" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_prev_result12" id="office_prev_result12" data-bs-height="180" required />
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <h3>Upload Your Customer’s Reviews</h3>
+                    <section>
+                        <div class=" card-body">
+                            <div class="row mb-5">
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic1" id="office_custmer_reviews_pic1" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic2" id="office_custmer_reviews_pic2" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic3" id="office_custmer_reviews_pic3" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic4" id="office_custmer_reviews_pic4" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic5" id="office_custmer_reviews_pic5" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic6" id="office_custmer_reviews_pic6" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic7" id="office_custmer_reviews_pic7" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic8" id="office_custmer_reviews_pic8" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic9" id="office_custmer_reviews_pic9" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic10" id="office_custmer_reviews_pic10" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic11" id="office_custmer_reviews_pic11" data-bs-height="180" required />
+                                </div>
+                                <div class="col-lg-4 col-sm-12 mb-4 mb-lg-0">
+                                    <input type="file" class="dropify" name="office_custmer_reviews_pic12" id="office_custmer_reviews_pic12" data-bs-height="180" required />
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+ -->

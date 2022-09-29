@@ -1,0 +1,109 @@
+{% extends 'seller_base.html' %} 
+
+
+{% block body %}
+<style>
+    .card {
+  width: 350px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  height: 350px;
+  position: relative;
+}
+
+
+
+body {
+  background: #eee;
+}
+
+.mobile-text {
+  color: #989696b8;
+  font-size: 15px;
+}
+
+.form-control {
+  margin-right: 12px;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ff8880;
+  outline: 0;
+  box-shadow: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+</style>
+</sty>
+
+<div class="app sidebar-mini ltr">
+
+    <!-- BACKGROUND-IMAGE -->
+    <div class="" style="  background-image: linear-gradient(to right, rgb(234, 76, 70),rgb(240, 116, 112),rgb(241, 149, 155));
+    ">
+
+        <!-- GLOABAL LOADER -->
+        <div id="global-loader">
+            <img src="/static/images/loader.svg" class="loader-img" alt="Loader">
+        </div>
+        <!-- /GLOABAL LOADER -->
+
+        <!-- PAGE -->
+        <div class="page">
+            <div class="">
+
+                <!-- CONTAINER OPEN -->
+                <div class="col col-login mx-auto mt-7">
+                    <div class="text-center">
+                        <img src="/static/images/brand/door-you-white.png" class="header-brand-img" alt="" height=207px width=55px  >
+                    </div>
+                </div>
+
+                <div class="container-login100">
+                    <div class="wrap-login100 p-6" style='margin-top: -74px;'>
+                        
+                            <span class="login100-form-title pb-5">
+                                Verify Your Number
+                            </span> 
+                            
+                            <div class="tab-pane" id="tab6">
+                                <div class="d-flex justify-content-center align-items-center container">
+                                    <div class="card py-5 px-3">
+                                        <h5 class="m-0">Mobile phone verification</h5><span class="mobile-text">Enter the code we just send on your mobile phone <b class="text-danger">+91 {{usermobilenuuber}}</b></span>
+                                        <form class="login100-form validate-form" method="post" action="seller-otp-verify">
+                                            {% csrf_token %}
+                                        <div class="d-flex flex-row mt-5"><input type="number" class="form-control" autofocus=""  name="code">
+                                            <!-- <input type="number" class="form-control" maxlength="1" name="otp2"><input type="number" class="form-control" maxlength="1" name="otp3"><input type="number" class="form-control" maxlength="1" name="otp4"> -->
+                                        </div>
+                                        <div class="text-center mt-5"><span class="d-block mobile-text">Don't receive the code?</span><span class="font-weight-bold text-danger cursor">Resend</span></div>
+                                        <div class="container-login100-form-btn ">
+                                            <button class="btn btn-primary" type="submit" id="generate-otp">
+                                                Verify
+                                            </button>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                                
+                                <span></span>
+                                
+                            </div>
+
+                        
+                    </div>
+                </div>
+                <!-- CONTAINER CLOSED -->
+            </div>
+        </div>
+        <!-- End PAGE -->
+
+    </div>
+</div>
+
+{% endblock body %}

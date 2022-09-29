@@ -1,0 +1,1039 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}View Profile{% endblock title %}
+{% block body %}
+<style>
+        .checked {
+        color: yellow;
+    }
+</style>
+<!-- 
+<style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    section {
+        position: relative;
+        max-width: 100%;
+        padding: 50px 0;
+        background: #fff;
+        border-radius: 25px;
+    }
+
+    section .col-bg-blue {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        min-height: 14px;
+        background-color: blue;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+
+    /* section .col-row{
+        position: relative;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;    
+    } */
+
+
+    section .col-row .col-image {
+        width: 150px;
+        height: 120px;
+
+    }
+
+
+
+    section .col-row .col-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-repeat: no-repeat;
+
+    }
+
+
+    section .col-row .col-text {
+        max-width: calc(100% - 170px);
+        margin-left: 20px;
+
+    }
+
+
+    section .col-bg-colog-with-text {
+        position: relative;
+        max-width: 100%;
+        min-height: 40px;
+        background-color: blue;
+    }
+
+    section .col-bg-colog-with-text .col-row h2 {
+        font-size: 30px;
+        font-weight: 400;
+        color: #EFD757;
+        font-style: italic;
+        margin-bottom: 0;
+        max-width: 50%;
+        flex: 0 0 50%;
+        text-align: center;
+
+    }
+
+    section .col-bg-colog-with-text .col-row .col-image-star {
+        position: relative;
+        max-width: 50%;
+        flex: 0 0 50%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+    }
+
+    section .col-bg-colog-with-text .col-row .col-image-star .col-star {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    section .col-bg-colog-with-text .col-row .col-image-star .col-star span {
+        color: #EFD757;
+
+    }
+
+    section .col-bg-colog-with-text .col-row .col-image-star .col-star img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    section .col-row-icon {
+        position: relative;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 25px 40px;
+        border: 1px solid black;
+        border-radius: 12px;
+        margin-top: 30px;
+        color: black;
+    }
+
+
+    section .col-row-icon .col-icon-row {
+        width: 40px;
+        height: 40px;
+
+    }
+
+
+    section .col-row-icon .col-icon-row img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    section .col-row-icon h2 {
+        max-width: calc(100% - 150px);
+        margin-left: 100px;
+        margin-bottom: 0;
+
+    }
+
+
+
+
+    section .col-text-with-icon {
+        position: relative;
+        max-width: 100%;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 20px 20px;
+
+    }
+
+    section .col-text-with-icon .col-row {
+        padding-left: 25px;
+        margin-top: 0;
+    }
+
+
+
+    section .col-text-with-icon .col-row .col-icon {
+        width: 40px;
+        height: 40px;
+
+    }
+
+
+    section .col-text-with-icon .col-row .col-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    section .col-text-with-icon .col-row .col-text {
+
+        max-width: calc(100% - 150px);
+        margin-left: 50px;
+
+
+    }
+
+
+
+    section .col-text-with-icon .col-row .col-text h2 {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: 400;
+        color: black;
+
+    }
+
+
+    section .tabs-menu-body .col-row {
+        position: relative;
+        max-width: calc(100% + 30px);
+        margin-left: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+
+
+    section .tabs-menu-body .col-row .col-three {
+        position: relative;
+        max-width: calc(33.33% - 30px);
+        flex: 0 0 calc(33.33% - 30px);
+        height: 200px;
+        margin: 0 15px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 1px solid black;
+        margin-top: 10px;
+
+    }
+
+    @media (min-width: 596px) and (max-width: 991px) {
+        section .tabs-menu-body .col-row .col-three {
+            max-width: calc(50% - 30px);
+            flex: 0 0 calc(50% - 30px);
+        }
+    }
+
+
+
+    @media (min-width: 320px) and (max-width: 595px) {
+        section .tabs-menu-body .col-row .col-three {
+            max-width: calc(100% - 30px);
+            flex: 0 0 calc(100% - 30px);
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 595px) {
+        .justify-content-evenly {
+            justify-content: baseline;
+        }
+    }
+
+
+
+    section .tabs-menu-body .col-row .col-three img {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        object-fit: cover;
+
+    }
+
+    section .col-background-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    section .col-background-image img {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+
+    /*modal box*/
+
+    .col-modal-width {
+        position: relative;
+        max-width: 90%;
+    }
+
+    section .col-red-bg {
+        max-width: 100%;
+        height: 40px;
+        background-color: red;
+    }
+
+
+    section .fleg-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        z-index: 0;
+
+    }
+
+
+    section .fleg-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        z-index: 0;
+
+    }
+
+    section .fleg-image span {
+        position: absolute;
+        top: 21px;
+        right: 30px;
+        width: 30px;
+        z-index: 1;
+
+    }
+
+    section .fleg-image span::after {
+        content: "";
+        position: absolute;
+        top: -11px;
+        right: -9px;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        z-index: -1;
+        border-radius: 50%;
+    }
+
+    section .col-icon {
+        position: relative;
+        max-width: 40px;
+        height: 40px;
+
+    }
+
+    section .col-border {
+        position: relative;
+        max-width: 100%;
+        border: 1px solid black;
+        padding: 20px 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    section .col-row-border {
+        position: relative;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        padding: 20px 20px;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    section .col-icon img {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+
+    section h3 {
+        max-width: calc(100% - 90px);
+        margin-left: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        color: black;
+        margin-bottom: 0;
+    }
+</style> -->
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">View Profile</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">View Profile</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-12">
+                <div class="card">
+                    <section>
+                        <div class="col-bg-blue" style="position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        max-width: 100%;
+                        min-height: 14px;
+                        background-color: blue;
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 25px; "></div>
+
+                        <div class="container" style="margin-top: 19px;">
+                            <!-- <div class="col-row"> -->
+                            <div class="row">
+                                <div class="col-md-12  col-xl-12">
+                                    <div class="card">
+                                        <div class="row g-0">
+                                            <div class="col-md-3" style="    display: flex;
+                                            align-items: center;
+                                            justify-content: space-evenly;">
+                                                <img src="/media/{{userprofiledata.CompanyLogo}}" class="card-img-left h-40"
+                                                    alt="img" style="width: 70%; border-radius: 14px;">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="">
+                                                    <div class="card-body" style="margin-bottom: -45px;">
+                                                        <form class="form-horizontal">
+
+
+                                                            <div class=" row mb-1">
+                                                                <h5><strong>Name&emsp;&emsp;</strong> : &emsp; {{userprofiledata.CompanyCertificationPic1}}
+                                                                </h5>
+                                                            </div>
+                                                            <div class=" row mb-1">
+                                                                <h5><strong>E-mail ID&ensp;</strong> : &emsp;
+                                                                    naresh@gmail.com</h5>
+                                                            </div>
+                                                            <div class=" row mb-1">
+                                                                <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- </di   v> -->
+
+                        </div>
+                        <div class="card flex-row" style="background-color: #0f0fe4; border-radius: 0px; margin-bottom: 0px; padding-left: 61px; padding-right: 61px;">
+                            <p class=" mt-2 mb-3"
+                                style="color: yellow; font-style: italic; font-size: 15px; padding-left:15px ;">
+                                Professional</p>
+                            <p class="text-white m-auto" style="font-size: 16px; padding-right:15px ;">
+                                <strong></strong>
+                            </p>
+                            <div style="font-size: 17px; padding: 7px;">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card flex-row" style="padding-left: 7px; padding-right: 7px; margin-bottom: -37px;">
+                            <p
+                                style="color: black; font-style: italic; font-size: 30px; padding-left:15px ;">
+                                <i class="fa fa-solid fa-thumbs-up"></i><samp style="font-size: 16px;">&nbsp 1200</samp></p>
+                            <p class="text-white m-auto" style="font-size: 16px; padding-right:15px ;">
+                                <strong></strong>
+                            </p>
+                            <div style="font-size: 26px;">
+                                <span class="fa fa-eye"><samp style="font-size: 16px;">&nbsp 1500</samp></span>
+                            </div>
+                        </div>
+
+
+
+                        <section>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="panel-group1" id="accordion1">
+                                                <div class="panel panel-default mb-1">
+                                                    <div class="panel-heading1 ">
+                                                        <h4 class="panel-title1">
+                                                            <a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseFour" aria-expanded="false">About us</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                                                        
+                                                        <div class="panel-body">
+                                                            <h3>About us</h3>
+                                                            <p>{{userprofiledata.ContactPersonName}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading1">
+                                                        <h4 class="panel-title1">
+                                                            <a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseFive" aria-expanded="false">Our Specialization</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                                                        <div class="panel-body">
+                                                            <p>Our Specialization</p>
+                                                            <p>{{userprofiledata.SpecializationOfCompany}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading1">
+                                                        <h4 class="panel-title1">
+                                                            <a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapsesix" aria-expanded="false">We are Sever in these categories</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                                                        <div class="panel-body">
+                                                            <p>We are Sever in these categories</p>
+                                                            <p>{{userprofiledata.WhyJoin}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading1">
+                                                        <h4 class="panel-title1">
+                                                            <a class="accordion-toggle collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseseven" aria-expanded="false">Contacting Person & Details</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                                                        <div class="panel-body">
+                                                            <p>Contacting Person & Details</p>
+                                                            <div class="row">
+                                                                <div class="col-md-12  col-xl-12">
+                                                                    <div class="card">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-3" style="    display: flex;
+                                                                            align-items: center;
+                                                                            justify-content: space-evenly;">
+                                                                                <img src="/media/{{userprofiledata.ContactPersonPic}}" class="card-img-left h-40"
+                                                                                    alt="img" style="width: 80%; border-radius: 14px;">
+                                                                            </div>
+                                                                            <div class="col-md-9">
+                                                                                <div class="">
+                                                                                    <div class="card-body" style="margin-bottom: -45px;">
+                                                                                        <form class="form-horizontal">
+                                
+                                
+                                                                                            <div class=" row mb-1">
+                                                                                                <h5><strong>Name&emsp;&emsp;</strong> : &emsp; {{userprofiledata.ContactPersonName}}
+                                                                                                </h5>
+                                                                                            </div>
+                                                                                            <div class=" row mb-1">
+                                                                                                <h5><strong>E-mail ID&ensp;</strong> : &emsp; {{userprofiledata.CompanyCertificationPic1}}</h5>
+                                                                                            </div>
+                                                                                            <div class=" row mb-1">
+                                                                                                <h5><strong>Dist. Name</strong> : &emsp; {{userprofiledata.ContactPersonDesigation}}</h5>
+                                                                                            </div>
+                                
+                                                                                        </form>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- COL-END -->
+                            </div>
+                        </section>
+
+
+
+                        <section>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="card">
+                                        
+                                        <div class="card-body" style="    border: 1px solid #100e0e; border-radius: 10px;">
+                                            <div class="panel panel-primary">
+                                                <div class="tab-menu-heading tab-menu-heading-boxed">
+                                                    <div class="tabs-menu-boxed">
+                                                        <!-- Tabs -->
+                                                        <ul class="nav panel-tabs justify-content-evenly">
+                                                            <li><a href="#tab25" class="active" data-bs-toggle="tab"><img src="/static/images/image-douryou/online-advertising 1.png" alt="douryou_images"></a></li>
+                                                            <li><a href="#tab26" data-bs-toggle="tab"><img src="/static/images/image-douryou/online-advertising 5.png" alt="douryou_images"></a></li>
+                                                            <li><a href="#tab27" data-bs-toggle="tab"><img src="/static/images/image-douryou/icon/add 4.png" alt="douryou_images"></a></li>
+                                                            <li><a href="#tab28" data-bs-toggle="tab"><img src="/static/images/image-douryou/icon/add 18.png" alt="douryou_images"></a></li>
+                                                            <li><a href="#tab29" data-bs-toggle="tab"><img src="/static/images/image-douryou/icon/online-advertising 5 (1).png" alt="douryou_images"></a></li>
+                                                            <li><a href="#tab30" data-bs-toggle="tab"><img src="/static/images/image-douryou/online-advertising 3.png" alt="douryou_images"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body tabs-menu-body">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="tab25">
+                                                            <div class="demo-gallery ">
+                                                                
+                                                                <div class="card-body">
+                                                                    <ul id="lightgallery" class="list-unstyled row">
+                                                                        {% if userprofiledata.OfficePic1 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic1}}" data-src="/media/{{userprofiledata.OfficePic1}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic1}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic2 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic2}}" data-src="/media/{{userprofiledata.OfficePic2}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic2}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic3 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic3}}" data-src="/media/{{userprofiledata.OfficePic3}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic3}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic4 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic4}}" data-src="/media/{{userprofiledata.OfficePic4}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic4}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic5 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic5}}" data-src="/media/{{userprofiledata.OfficePic5}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic5}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic6 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic6}}" data-src="/media/{{userprofiledata.OfficePic6}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic6}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic7 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic7}}" data-src="/media/{{userprofiledata.OfficePic7}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic7}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic8 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic8}}" data-src="/media/{{userprofiledata.OfficePic8}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic8}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic9 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic9}}" data-src="/media/{{userprofiledata.OfficePic9}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic9}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic10 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic10}}" data-src="/media/{{userprofiledata.OfficePic10}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic10}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic11 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic11}}" data-src="/media/{{userprofiledata.OfficePic11}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic11}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.OfficePic12 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.OfficePic12}}" data-src="/media/{{userprofiledata.OfficePic12}}" data-sub-html="<h4>company profile</h4><p>company profile pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.OfficePic12}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-profile">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="tab-pane" id="tab26">
+                                                            <div class="demo-gallery ">
+                                                                
+                                                                <div class="card-body">
+                                                                    <ul id="lightgalleryq" class="list-unstyled row">
+                                                                        {% if userprofiledata.CompanyCertificationPic1 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic1}}" data-src="/media/{{userprofiledata.CompanyCertificationPic1}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic1}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic2 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic2}}" data-src="/media/{{userprofiledata.CompanyCertificationPic2}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic2}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic3 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic3}}" data-src="/media/{{userprofiledata.CompanyCertificationPic3}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic3}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic4 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic4}}" data-src="/media/{{userprofiledata.CompanyCertificationPic4}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic4}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic5 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic5}}" data-src="/media/{{userprofiledata.CompanyCertificationPic5}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic5}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic6 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic6}}" data-src="/media/{{userprofiledata.CompanyCertificationPic6}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic6}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic7 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic7}}" data-src="/media/{{userprofiledata.CompanyCertificationPic7}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic7}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic8 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic8}}" data-src="/media/{{userprofiledata.CompanyCertificationPic8}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic8}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic9 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic9}}" data-src="/media/{{userprofiledata.CompanyCertificationPic9}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic9}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic10 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic10}}" data-src="/media/{{userprofiledata.CompanyCertificationPic10}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic10}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic11 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic11}}" data-src="/media/{{userprofiledata.CompanyCertificationPic11}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic11}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyCertificationPic12 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic12}}" data-src="/media/{{userprofiledata.CompanyCertificationPic12}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic12}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tab-pane" id="tab27">
+                                                            <div class="demo-gallery ">
+                                                                <div class="card-body">
+                                                                    <ul id="lightgalleryr" class="list-unstyled row">
+                                                                        {% if userprofiledata.CompanyCertificationPic1 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic1}}" data-src="/media/{{userprofiledata.CompanyCertificationPic1}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic1}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tab-pane" id="tab28">
+                                                            <div class="demo-gallery ">
+                                                                <div class="card-body">
+                                                                    <ul id="lightgalleryt" class="list-unstyled row">
+                                                                        {% if userprofiledata.CompanyCertificationPic1 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyCertificationPic1}}" data-src="/media/{{userprofiledata.CompanyCertificationPic1}}" data-sub-html="<h4>company Certificate</h4><p>company Certificate pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyCertificationPic1}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Certificate">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tab-pane" id="tab29">
+                                                            <div class="demo-gallery ">
+                                                                
+                                                                <div class="card-body">
+                                                                    <ul id="lightgalleryw" class="list-unstyled row">
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic1 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic1}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic1}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic1}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic2 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic2}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic2}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic2}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic3 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic3}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic3}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic3}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic4 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic4}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic4}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic4}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic5 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic5}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic5}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic5}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic6 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic6}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic6}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic6}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic7 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic7}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic7}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic7}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic8 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic8}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic8}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic8}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic9 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic9}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic9}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic9}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic10 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic10}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic10}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic10}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic11 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic11}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic11}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic11}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CompanyPreviousResultsPic12 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CompanyPreviousResultsPic12}}" data-src="/media/{{userprofiledata.CompanyPreviousResultsPic12}}" data-sub-html="<h4>company Previous Results</h4><p>company Previous Results pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CompanyPreviousResultsPic12}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Previous Results">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="tab-pane" id="tab30">
+                                                            <div class="demo-gallery ">
+                                                                
+                                                                <div class="card-body">
+                                                                    <ul id="lightgallerye" class="list-unstyled row">
+                                                                        {% if userprofiledata.CustomerReviewsPic1 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic1}}" data-src="/media/{{userprofiledata.CustomerReviewsPic1}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic1}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic2 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic2}}" data-src="/media/{{userprofiledata.CustomerReviewsPic2}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic2}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic3 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic3}}" data-src="/media/{{userprofiledata.CustomerReviewsPic3}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic3}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic4 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic4}}" data-src="/media/{{userprofiledata.CustomerReviewsPic4}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic4}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic5 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic5}}" data-src="/media/{{userprofiledata.CustomerReviewsPic5}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic5}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic6 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic6}}" data-src="/media/{{userprofiledata.CustomerReviewsPic6}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic6}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic7 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic7}}" data-src="/media/{{userprofiledata.CustomerReviewsPic7}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic7}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic8 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic8}}" data-src="/media/{{userprofiledata.CustomerReviewsPic8}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic8}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic9 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic9}}" data-src="/media/{{userprofiledata.CustomerReviewsPic9}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic9}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic10 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic10}}" data-src="/media/{{userprofiledata.CustomerReviewsPic10}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic10}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic11 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic11}}" data-src="/media/{{userprofiledata.CustomerReviewsPic11}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic11}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                        {% if userprofiledata.CustomerReviewsPic12 %}
+                                                                        <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0" data-responsive="/media/{{userprofiledata.CustomerReviewsPic12}}" data-src="/media/{{userprofiledata.CustomerReviewsPic12}}" data-sub-html="<h4>company Customer Reviews </h4><p>company Customer Reviews  pictures</p>">
+                                                                            <a href="">
+                                                                                <img class="img-responsive br-5" src="/media/{{userprofiledata.CustomerReviewsPic12}}" style="min-width: 100%; height: 170px; object-fit: cover;border-radius: 14px;" alt="douryou company-Customer Reviews ">
+                                                                            </a>
+                                                                        </li>
+                                                                        {% endif %}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    {% endblock body %}

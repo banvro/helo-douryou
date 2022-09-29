@@ -1,0 +1,252 @@
+{% extends 'createprofile_base.html' %}
+{% block title %}Create Company Profile{% endblock title %}
+{% block body %}
+<!--Row open-->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header border-bottom-0">
+                <h3 class="card-title">Enter Company Details..</h3>
+            </div>
+            <form method="POST" action= "seller-create-profile1" id="myForm" enctype="multipart/form-data">
+                {% csrf_token %}
+            <div class="card-body">
+                <div id="smartwizard-3">
+                    <ul>
+                        <li><a href="#step-10">About Contact Person</a></li>
+                        <li><a href="#step-11">Company Deitails</a></li>
+                        <li><a href="#step-12">About Company</a></li>
+                        <li><a href="#step-13">Why you want to join us?</a></li>
+                    </ul>
+                    
+                    <div>
+                        <div id="step-10" class="">
+                            <div class="form-horizontal" style="padding-left: 10%; padding-right: 10%;">
+
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Upload Contact Person’s
+                                        Pic</label> 
+                                    <div class="col-md-9">
+                                        <input type="file" class="dropify" name="ContactPersonPic" onchange="readURL(this);"
+                                            data-height="180" />
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="ContactPersonName", name="ContactPersonName"
+                                            placeholder="Contact Person’s Name">
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="number" class="col-md-3 form-label">Contact Number</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="ContactPersonNumber" name="ContactPersonNumber"
+                                            placeholder="Contact Number">
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="Desigation" class="col-md-3 form-label">Desigation</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="ContactPersonDesigation" name="ContactPersonDesigation"
+                                            placeholder="Contact Person’s Desigation">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="step-11" class="">
+                            <div class="form-horizontal" style="padding-left: 10%; padding-right: 10%;">
+
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Company Logo</label>
+                                    <div class="col-md-9">
+                                        <input type="file" class="dropify" name="CompanyLogo" onchange="readURL(this);"
+                                            data-height="180" />
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Company Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="CompanyName" id="CompanyName"
+                                            placeholder="Enter Company Name" required>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Company’s Address</label>
+                                    <div class="col-md-9">
+                                        <input type="textarea" class="form-control" name="CompanyAddress" id="CompanyAddress"
+                                            placeholder="Enter Company Address" required>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">District Name </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="CompanyDistrictName" id="CompanyDistrictName"
+                                            placeholder="Enter District" required>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">State Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="CompanyStateName" id="CompanyStateName"
+                                            placeholder="Enter State" required>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">E-Mail ID</label>
+                                    <div class="col-md-9">
+                                        <input type="email" class="form-control" name="CompanyEmailID" id="CompanyEmailID"
+                                            placeholder="Enter Company Profational Email.." required>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Website</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="CompanyWebsiteLink" id="CompanyWebsiteLink"
+                                            placeholder="Enter Company Profational Website.." required>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Login Phone No</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="CompanyLoginPhoneNo"
+                                            id="CompanyLoginPhoneNo" placeholder="Enter Login Phone No..." required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step-12" class="">
+                            <div class="form-horizontal" style="padding-left: 10%; padding-right: 10%;">
+
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">About Us</label>
+                                    <div class="col-md-9">
+                                        <textarea type="text" class="form-control" name="AboutCompany" id="AboutCompany"
+                                            placeholder="About Company" required></textarea>
+                                    </div>
+                                </div>
+                                <div class=" row mb-4">
+                                    <label for="inputName" class="col-md-3 form-label">Our Specialization</label>
+                                    <div class="col-md-9">
+                                        <textarea type="text" class="form-control" name="SpecializationOfCompany"
+                                            id="SpecializationOfCompany" placeholder="Specialization.." required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step-13" class="">
+                            <div class="row mt-4" style="padding-left: 12%;
+                            padding-right: 12%;">
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="form-group m-0">
+                            
+                                        <div class="custom-controls-stacked">
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="IELTS" value="IELTS" >
+                                                <span class="custom-control-label">IELTS</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="Passport" value="Passport" >
+                                                <span class="custom-control-label">Passport</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="Study Visa" value="Study Visa" >
+                                                <span class="custom-control-label">Study Visa</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="Education Loan" value="Education Loan" >
+                                                <span class="custom-control-label">Education Loan</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="Air Ticket" value="Air Ticket" >
+                                                <span class="custom-control-label">Air Ticket</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="Travel Insurance" value="Travel Insurance" >
+                                                <span class="custom-control-label">Travel Insurance</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="WhyJoin" id="International Matrimonial" value="International Matrimonial" >
+                                                <span class="custom-control-label">International Matrimonial</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="form-group m-0">
+                                        <div class="custom-controls-stacked">
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Money Exchange" id="Money Exchange" value="Money Exchange" >
+                                                <span class="custom-control-label">Money Exchange</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Transport For Airport" id="Transport For Airport" value="Transport For Airport" >
+                                                <span class="custom-control-label">Transport For Airport</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Luggage Adjustment" id="Luggage Adjustment" value="Luggage Adjustment" >
+                                                <span class="custom-control-label">Luggage Adjustment</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Accommodation at Abroad" id="Accommodation at Abroad" value="Accommodation at Abroad" >
+                                                <span class="custom-control-label">Accommodation at Abroad</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Jobs at Abroad" id="Jobs at Abroad" value="Jobs at Abroad" >
+                                                <span class="custom-control-label">Jobs at Abroad</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Tour Travel Package" id="Tour Travel Package" value="Tour Travel Package" >
+                                                <span class="custom-control-label">Tour Travel Package</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <div class="form-group m-0">
+                                        <div class="custom-controls-stacked">
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Work Permit" id="Work Permit" value="Work Permit" >
+                                                <span class="custom-control-label">Work Permit</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Permanent Resident (PR)" id="Permanent Resident (PR)" value="Permanent Resident (PR)" >
+                                                <span class="custom-control-label">Permanent Resident (PR)</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Tourist & Business Visa" id="Tourist & Business Visa" value="Tourist & Business Visa" >
+                                                <span class="custom-control-label">Tourist & Business Visa</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="International Courier" id="International Courier" value="International Courier" >
+                                                <span class="custom-control-label">International Courier</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Legal Adviser" id="Legal Adviser" value="Legal Adviser" >
+                                                <span class="custom-control-label">Legal Adviser</span>
+                                            </label>
+                                            <label class="custom-control custom-checkbox-md">
+                                                <input type="checkbox" class="custom-control-input" name="Online IELTS Classes" id="Online IELTS Classes" value="Online IELTS Classes" >
+                                                <span class="custom-control-label">Online IELTS Classes</span>
+                                            </label>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <a class="btn btn-primary" style="
+                    display: block;
+                    margin-left: 30%;
+                    margin-right: 30%;" type="submit" value="send">Subbmit </a> -->
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--row closed-->
+{% endblock body %}

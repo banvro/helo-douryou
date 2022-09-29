@@ -1,0 +1,297 @@
+{% extends 'admin_base.html' %}
+{% block title %}Approvals{% endblock title %}
+{% block body %}
+<style>
+    .checked {
+  color: yellow;
+}
+</style>
+
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Approvals</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Admin Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Seller & User Approvals</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->    
+
+
+
+
+<div class="panel panel-primary">
+    <div class="tab-menu-heading">
+        <div class="tabs-menu1">
+            <!-- Tabs -->
+            <ul class="nav panel-tabs" style="justify-content: center;">
+                <li class="mx-0"><a href="#tab5" class="active" data-bs-toggle="tab">User requests</a></li>
+                <li class="mx-0"><a href="#tab6" data-bs-toggle="tab">Seller Posts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel-body tabs-menu-body p-0 pt-5">
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab5">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12  col-xl-6">
+                                <div class="card">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card">
+                                                <div class="card-body" style="margin-bottom: -45px;">
+                                                    <form class="form-horizontal">
+                                                        
+                                                        <div  class="mb-0 row justify-content-end">
+                                                            <div class="col-md-3" style="font-size: 25px;">
+                                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class=" row mb-4">
+                                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                                        </div>
+                                                        <div class=" row mb-4">
+                                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                                        </div>
+                                                        <div class=" row mb-4">
+                                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                                        </div>
+                  
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <section style=" margin-left: 26px; width: 93%;">
+                                        <input type="text" class="form-control border-dark fs-5" id="exampleFormControlInput1" placeholder="Category" style="height: 60px ;">
+                                        <!-- <textarea class="form-control mt-3 fs-5 border-dark" id="exampleFormControlTextarea1" rows="3" placeholder="title"></textarea> -->
+                                                    
+                                        <input type="text" class="form-control border-dark fs-5 mt-3" id="exampleFormControlInput1" placeholder="When you required" style="height: 60px ;">
+                                        <input type="text" class="form-control border-dark fs-5 mt-3" id="exampleFormControlInput1" placeholder="title" style="height: 60px ;">
+                                                    
+                                        <textarea class="form-control mt-3 fs-5 border-dark" id="exampleFormControlTextarea1" rows="3" placeholder="Description of requirement"></textarea>
+                                                    
+                                    </section>
+                                    <div style="width: 100%; padding: 2px; background-color: blue; color: white; margin-bottom: -1px; margin-top: 15px;">
+                                        <h6 style="margin-top: 6px; margin-left: 17px;"><b>Posting Date & Time :-</b></h6>
+                                    </div>
+                                    <div style="margin-top: 13px;">
+                                        <div class="card border-0">
+                                            <div class="row">
+                                              <div class="col-6 text-center">
+                                                <a href="#" class="btn btn-success mt-3" style=" padding: 9px 50px; background-color: green !important;">Approve</a>
+                                              </div>
+                                              <div class="col-6 text-center">
+                                                <a href="#" class="btn btn-danger mt-3" style="padding: 9px 50px; background-color: red !important;">Reject</a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tab-pane" id="tab6">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12  col-xl-6">
+                                <div class="card" style="width: 95%;">
+                                    <div class="row bg-white" style="border-radius: 14px;">
+                                        <div class="fleg-img" style="padding: 0;">
+                                            <!-- <img src="/static/images/zx.png" alt=""> -->
+                                                <img src="/static/images/zx.png" alt="">
+                                        </div>
+                                        <div class="card flex-row" style="background-color: #0f0fe4; border-radius: 0px;">
+                                            <p class=" mt-2 mb-2" style="color: yellow; font-style: italic; font-size: 15px;">
+                                                Professional</p>
+                                    
+                                            <p class="text-white m-auto" style="font-size: 16px;"><strong>STUDY VISA</strong></p>
+                                    
+                                            <div style="font-size: 17px; padding: 7px;">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                    
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="card py-5 border-0 " style="    margin-top: -23px; margin-bottom: 2px;">
+                                    
+                                            <div class="row  flex-nowrap">
+                                                <div class="col-3">
+                                                    <img src="/static/images/users/stuavtar.png" class="img-fluid rounded-start"
+                                                        alt="douryou thumbnail" style="width:100px ; height:100px;">
+                                                </div>
+                                                <div class="col-8">
+                                                    <h4 class="card-text">Canada Study Visa</h4>
+                                                    <h5 class="card-text">Eazyvisa Immigration Cusultalt</h5>
+                                                    <h6 class="card-text">Sco-40-41, Sector-34A, Chandigarh</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%; padding: 2px; background-color: blue; color: white; margin-bottom: -1px; margin-top: 15px;">
+                                            <h6 style="margin-top: 6px; margin-left: 17px;"><b>Posting Date & Time :-</b></h6>
+                                        </div>
+                                        <div style="margin-top: 13px;">
+                                            <div class="card border-0">
+                                                <div class="row">
+                                                  <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-success mt-3" style=" padding: 9px 50px; background-color: green !important;">Approve</a>
+                                                  </div>
+                                                  <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-danger mt-3" style="padding: 9px 50px; background-color: red !important;">Reject</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12  col-xl-6">
+                                <div class="card" style="width: 95%;">
+                                    <div class="row bg-white" style="border-radius: 14px;">
+                                        <div class="fleg-img" style="padding: 0;">
+                                            <img src="/static/images/zx.png" alt="">
+                                        </div>
+                                        <div class="card flex-row" style="background-color: #0f0fe4; border-radius: 0px;">
+                                            <p class=" mt-2 mb-2" style="color: yellow; font-style: italic; font-size: 15px;">
+                                                Professional</p>
+                                    
+                                            <p class="text-white m-auto" style="font-size: 16px;"><strong>STUDY VISA</strong></p>
+                                    
+                                            <div style="font-size: 17px; padding: 7px;">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                    
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="card py-5 border-0 " style="    margin-top: -23px; margin-bottom: 2px;">
+                                    
+                                            <div class="row  flex-nowrap">
+                                                <div class="col-3">
+                                                    <img src="/static/images/users/stuavtar.png" class="img-fluid rounded-start"
+                                                        alt="douryou thumbnail" style="width:100px ; height:100px;">
+                                                </div>
+                                                <div class="col-8">
+                                                    <h4 class="card-text">Canada Study Visa</h4>
+                                                    <h5 class="card-text">Eazyvisa Immigration Cusultalt</h5>
+                                                    <h6 class="card-text">Sco-40-41, Sector-34A, Chandigarh</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%; padding: 2px; background-color: blue; color: white; margin-bottom: -1px; margin-top: 15px;">
+                                            <h6 style="margin-top: 6px; margin-left: 17px;"><b>Posting Date & Time :-</b></h6>
+                                        </div>
+                                        <div style="margin-top: 13px;">
+                                            <div class="card border-0">
+                                                <div class="row">
+                                                  <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-success mt-3" style=" padding: 9px 50px; background-color: green !important;">Approve</a>
+                                                  </div>
+                                                  <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-danger mt-3" style="padding: 9px 50px; background-color: red !important;">Reject</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12  col-xl-6">
+                                <div class="card" style="width: 95%;">
+                                    <div class="row bg-white" style="border-radius: 14px;">
+                                        <div class="fleg-img" style="padding: 0;">
+                                            <!-- <iframe style="border-top-left-radius: 12px; border-top-right-radius: 12px;" width="100%"
+                                                height="100%" src="https://www.youtube.com/embed/CI56PvGDNsk" title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe> -->
+                                            <img src="/static/images/zx.png" alt="">
+                                        </div>
+                                        <div class="card flex-row" style="background-color: #0f0fe4; border-radius: 0px;">
+                                            <p class=" mt-2 mb-2" style="color: yellow; font-style: italic; font-size: 15px;">
+                                                Professional</p>
+                                    
+                                            <p class="text-white m-auto" style="font-size: 16px;"><strong>STUDY VISA</strong></p>
+                                    
+                                            <div style="font-size: 17px; padding: 7px;">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                                <span class="fa fa-star"></span>
+                                    
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="card py-5 border-0 " style="    margin-top: -23px; margin-bottom: 2px;">
+                                    
+                                            <div class="row  flex-nowrap">
+                                                <div class="col-3">
+                                                    <img src="/static/images/users/stuavtar.png" class="img-fluid rounded-start"
+                                                        alt="douryou thumbnail" style="width:100px ; height:100px;">
+                                                </div>
+                                                <div class="col-8">
+                                                    <h4 class="card-text">Canada Study Visa</h4>
+                                                    <h5 class="card-text">Eazyvisa Immigration Cusultalt</h5>
+                                                    <h6 class="card-text">Sco-40-41, Sector-34A, Chandigarh</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%; padding: 2px; background-color: blue; color: white; margin-bottom: -1px; margin-top: 15px;">
+                                            <h6 style="margin-top: 6px; margin-left: 17px;"><b>Posting Date & Time :-</b></h6>
+                                        </div>
+                                        <div style="margin-top: 13px;">
+                                            <div class="card border-0">
+                                                <div class="row">
+                                                  <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-success mt-3" style=" padding: 9px 50px; background-color: green !important;">Approve</a>
+                                                  </div>
+                                                  <div class="col-6 text-center">
+                                                    <a href="#" class="btn btn-danger mt-3" style="padding: 9px 50px; background-color: red !important;">Reject</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

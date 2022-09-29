@@ -1,0 +1,142 @@
+{% extends 'admin_base.html' %}
+{% block title %}Premium Users{% endblock title %}
+{% block body %}
+<style>
+    section {
+        padding: 50px 0;
+    }
+
+    .col-form {
+        position: relative;
+        max-width: 100%;
+        min-height: 80px;
+        border: 1px solid black;
+        border-radius: 12px;
+        background-color: #fff;
+        padding: 10px 50px 0 15px;
+    }
+
+    .col-form input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        padding-bottom: 30px;
+    }
+</style>
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Premium Users</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Admin Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Premium Users</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-12">
+                <div class="card">
+
+                    <section>
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <h3>Premium Users</h3>
+                                    <div class="form-group">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="thumbnaillink" id="thumbnaillink" placeholder="Thumbnail link" style="border: 1px solid #000000; border-radius: 13px;">
+                                            <label for="floatingInput">Title </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-5">
+                                    <div class="card">
+                                        <div class="card-header justify-content-between">
+                                            <h3 class="card-title">Selected Users</h3>
+                                            <h3 class="card-title">(max 30 users)</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="text-wrap mb-4">
+                                                <div class="">
+                                                    <div class="alert alert-success">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                            aria-hidden="true">×</button>
+                                                        <span><img src="/static/images/users/stuavtar.png" alt=""
+                                                                style="width:50px ; height: 50px;"></span>
+                                                        <strong class="mx-3">Name</strong>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="text-wrap mb-4">
+                                                <div class="">
+                                                    <div class="alert alert-success">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                            aria-hidden="true">×</button>
+                                                        <span><img src="/static/images/users/stuavtar.png" alt=""
+                                                                style="width:50px ; height: 50px;"></span>
+                                                        <strong class="mx-3">Name</strong>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="text-wrap mb-4">
+                                                <div class="">
+                                                    <div class="alert alert-success">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                            aria-hidden="true">×</button>
+                                                        <span><img src="/static/images/users/stuavtar.png" alt=""
+                                                                style="width:50px ; height: 50px;"></span>
+                                                        <strong class="mx-3">Name</strong>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="text-wrap mb-4">
+                                                <div class="">
+                                                    <div class="alert alert-success">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                            aria-hidden="true">×</button>
+                                                        <span><img src="/static/images/users/stuavtar.png" alt=""
+                                                                style="width:50px ; height: 50px;"></span>
+                                                        <strong class="mx-3">Name</strong>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-100 text-end mt-5">
+                                            <button type="button" class="btn btn-secondary"
+                                                style="padding:12px 50px ;    padding: 6px 50px;
+                                                background: blue !important;">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock body %}

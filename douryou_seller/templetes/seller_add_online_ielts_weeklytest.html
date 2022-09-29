@@ -1,0 +1,135 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}Online IELTS Weekly Test{% endblock title %}
+{% block body %}
+<style>
+    .fa-heart-o {
+        color: red;
+        cursor: pointer;
+    }
+
+    .fa-heart {
+        color: red;
+        cursor: pointer;
+    }
+</style>
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Add Online IELTS Weekly Test</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Online IELTS Weekly Test</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card" style="padding: 12px;">
+            <div class="card-header">
+                <h4 class="card-title">Add Online IELTS Weekly Test</h4>
+            </div>
+            <div class="card-body" style="    border: 1px solid black; border-radius: 14px;">
+                <form class="form-horizontal">
+                    <div class=" row mb-4">
+                        <label class="col-md-4 form-label text-center   ">Test No.</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" value="101"
+                                style="border: none;border-bottom: solid;">
+                        </div>
+                    </div>
+                    <div class=" row mb-4">
+                        <label class="col-md-4 form-label text-center   ">Test Date</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" value="15-08-2022"
+                                style="border: none;border-bottom: solid;">
+                        </div>
+                    </div>
+                    <div class=" row mb-4">
+                        <label class="col-md-4 form-label text-center   ">Total Student</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" value="1210"
+                                style="border: none;border-bottom: solid;">
+                        </div>
+                    </div>
+                    <div class=" row mb-4">
+                        <label class="col-md-4 form-label text-center   ">Over all Results</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" value="1100"
+                                style="border: none;border-bottom: solid;">
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;
+                    color: #433838;">
+
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">9 Band<br>40 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">8 Band<br>150 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">7 Band<br>300 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">6 Band<br>150 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">5 Band<br>50 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">4 Band<br>45 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-header" style="border: 1px solid black; border-radius: 16px; ">
+                                        <h4 class="card-title">Below 4 Band<br>20 Students</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="" style="display: flex; justify-content: center;">
+                        <a class="btn btn-primary">POST</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /Row -->
+
+
+    {% endblock body %}

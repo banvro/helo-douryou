@@ -1,0 +1,98 @@
+{% extends 'admin_base.html' %}
+{% block title %}Add New My Match{% endblock title %}
+{% block body %}
+<style>
+
+    section{
+        padding: 50px 0;
+    }
+.col-form{
+    position: relative;
+    max-width: 100%;
+    min-height: 80px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 10px 50px 0 15px;
+}
+
+
+
+</style>
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Add New My Match</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Admin Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add New My Match</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->    
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-12">
+                <div class="card">
+                    
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    
+
+                                    <div class="form-group">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="selectuser" id="selectuser" placeholder="Select User" style="border: 1px solid #000000; border-radius: 13px;">
+                                            <label for="floatingInput">Select User</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="intrestedcountry" id="intrestedcountry" placeholder="Interested country" style="border: 1px solid #000000; border-radius: 13px;">
+                                            <label for="floatingInput">Interested country</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="servicerequired" id="servicerequired" placeholder="Service required" style="border: 1px solid #000000; border-radius: 13px;">
+                                            <label for="floatingInput">Service required</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="timeperid" id="timeperid" placeholder="Time period" style="border: 1px solid #000000; border-radius: 13px;">
+                                            <label for="floatingInput">Time period </label>
+                                        </div>
+                                    </div>
+                                    
+
+
+                                    <div class="row">
+                                        <div class="col-md-12 justify-content-end" style=" display: flex;">
+                                            <button type="button" class="btn btn-primary btn-lg mx-5" style="padding: 7px 50px; background: blue !important;;">Submit</button>
+                                        </div>
+                                        
+                                    </div>
+
+
+                                    
+                                </div>
+                
+                            </div>
+                
+                        </div>
+                    </section>
+                    
+                </div>
+            </div>      
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

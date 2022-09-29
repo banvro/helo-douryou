@@ -1,0 +1,399 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}My Match{% endblock title %}
+{% block body %}
+<style>
+    section {
+        padding: 50px 0;
+    }
+
+    .col-form {
+        position: relative;
+        max-width: 100%;
+        min-height: 80px;
+        border: 1px solid black;
+        border-radius: 12px;
+        background-color: #fff;
+        padding: 30px;
+    }
+
+    .col-form input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+
+    }
+
+    .two-icon {
+        position: relative;
+    }
+
+    .two-icon::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        right: 85px;
+        width: 40px;
+        height: 40px;
+        background-image: url("../image-douryou/Vector\ \(7\).png");
+        object-fit: contain;
+        background-repeat: no-repeat;
+    }
+
+    .two-icon::before {
+        content: "";
+        position: absolute;
+        bottom: 20px;
+        right: 45px;
+        width: 35px;
+        height: 35px;
+        background-image: url("../image-douryou/vector-12.png");
+        object-fit: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+</style>
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">My Match</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Match</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-12">
+                <div class="card">
+
+                    <section>
+                        <div class="container">
+                            <div class="row two-icon">
+                                <div class="col-12">
+                                    <div class="col-form mt-5">
+                                        <form>
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="101">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3"
+                                                    class="col-sm-2 col-form-label">Qualification</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="1210">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">City
+                                                    Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="1100">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputPassword3"
+                                                    class="col-sm-2 col-form-label border-0">Mobile No.</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="" id="inputPassword3">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-form mt-5">
+                                                <form>
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3"
+                                                            class="col-sm-2 col-form-label">Intrested Country</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Service
+                                                            Required</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Time
+                                                            Period</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </form>
+
+                                        <div class="row flex">
+                                            <div class="row mb-5 mt-5">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Date &
+                                                    Time</label>
+                                                <div class="col-sm-4">
+                                                    <input type="email" class="" id="inputEmail3" placeholder=""
+                                                        style="width: auto;">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row" style="display: flex; justify-content: end;">
+                                            <div class="col-sm-12" style="    display: flex;
+                                            justify-content: end;    margin-top: -71px;">
+                                                <a href="" style="color: red;
+                                    font-size: 25px; "><i class="fa-brands fa-man-messenger"
+                                                        aria-hidden="true"></i><svg
+                                                        style="width: 40px; margin-bottom: 29px;    margin-right: 15px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z" />
+                                                    </svg></a>
+                                                <a href="" style="color: blue;
+                                        font-size: 25px; "><i class="" aria-hidden="true"></i><svg
+                                                        style="width: 40px; margin-bottom: 29px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM320 96C284.7 96 256 124.7 256 160C256 162.5 256.1 164.9 256.4 167.3L174.5 212C162.8 199.7 146.3 192 128 192C92.65 192 64 220.7 64 256C64 291.3 92.65 320 128 320C146.3 320 162.8 312.3 174.5 299.1L256.4 344.7C256.1 347.1 256 349.5 256 352C256 387.3 284.7 416 320 416C355.3 416 384 387.3 384 352C384 316.7 355.3 288 320 288C304.6 288 290.5 293.4 279.4 302.5L194.1 256L279.4 209.5C290.5 218.6 304.6 224 320 224C355.3 224 384 195.3 384 160C384 124.7 355.3 96 320 96V96z" />
+                                                    </svg></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="col-form mt-5">
+                                        <form>
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="101">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3"
+                                                    class="col-sm-2 col-form-label">Qualification</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="1210">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">City
+                                                    Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="1100">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputPassword3"
+                                                    class="col-sm-2 col-form-label border-0">Mobile No.</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="" id="inputPassword3">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-form mt-5">
+                                                <form>
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3"
+                                                            class="col-sm-2 col-form-label">Intrested Country</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Service
+                                                            Required</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Time
+                                                            Period</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </form>
+
+                                        <div class="row flex">
+                                            <div class="row mb-5 mt-5">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Date &
+                                                    Time</label>
+                                                <div class="col-sm-4">
+                                                    <input type="email" class="" id="inputEmail3" placeholder=""
+                                                        style="width: auto;">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row" style="display: flex; justify-content: end;">
+                                            <div class="col-sm-12" style="    display: flex;
+                                            justify-content: end;    margin-top: -71px;">
+                                                <a href="" style="color: red;
+                                    font-size: 25px; "><i class="fa-brands fa-man-messenger"
+                                                        aria-hidden="true"></i><svg
+                                                        style="width: 40px; margin-bottom: 29px;    margin-right: 15px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z" />
+                                                    </svg></a>
+                                                <a href="" style="color: blue;
+                                        font-size: 25px; "><i class="" aria-hidden="true"></i><svg
+                                                        style="width: 40px; margin-bottom: 29px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM320 96C284.7 96 256 124.7 256 160C256 162.5 256.1 164.9 256.4 167.3L174.5 212C162.8 199.7 146.3 192 128 192C92.65 192 64 220.7 64 256C64 291.3 92.65 320 128 320C146.3 320 162.8 312.3 174.5 299.1L256.4 344.7C256.1 347.1 256 349.5 256 352C256 387.3 284.7 416 320 416C355.3 416 384 387.3 384 352C384 316.7 355.3 288 320 288C304.6 288 290.5 293.4 279.4 302.5L194.1 256L279.4 209.5C290.5 218.6 304.6 224 320 224C355.3 224 384 195.3 384 160C384 124.7 355.3 96 320 96V96z" />
+                                                    </svg></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="col-form mt-5">
+                                        <form>
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="101">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3"
+                                                    class="col-sm-2 col-form-label">Qualification</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="1210">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">City
+                                                    Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="" id="inputEmail3" placeholder="1100">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputPassword3"
+                                                    class="col-sm-2 col-form-label border-0">Mobile No.</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="" id="inputPassword3">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-form mt-5">
+                                                <form>
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3"
+                                                            class="col-sm-2 col-form-label">Intrested Country</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Service
+                                                            Required</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mb-3">
+                                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Time
+                                                            Period</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="email" class="" id="inputEmail3"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </form>
+
+                                        <div class="row flex">
+                                            <div class="row mb-5 mt-5">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Date &
+                                                    Time</label>
+                                                <div class="col-sm-4">
+                                                    <input type="email" class="" id="inputEmail3" placeholder=""
+                                                        style="width: auto;">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row" style="display: flex; justify-content: end;">
+                                            <div class="col-sm-12" style="    display: flex;
+                                            justify-content: end;    margin-top: -71px;">
+                                                <a href="" style="color: red;
+                                    font-size: 25px; "><i class="fa-brands fa-man-messenger"
+                                                        aria-hidden="true"></i><svg
+                                                        style="width: 40px; margin-bottom: 29px;    margin-right: 15px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z" />
+                                                    </svg></a>
+                                                <a href="" style="color: blue;
+                                        font-size: 25px; "><i class="" aria-hidden="true"></i><svg
+                                                        style="width: 40px; margin-bottom: 29px;"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM320 96C284.7 96 256 124.7 256 160C256 162.5 256.1 164.9 256.4 167.3L174.5 212C162.8 199.7 146.3 192 128 192C92.65 192 64 220.7 64 256C64 291.3 92.65 320 128 320C146.3 320 162.8 312.3 174.5 299.1L256.4 344.7C256.1 347.1 256 349.5 256 352C256 387.3 284.7 416 320 416C355.3 416 384 387.3 384 352C384 316.7 355.3 288 320 288C304.6 288 290.5 293.4 279.4 302.5L194.1 256L279.4 209.5C290.5 218.6 304.6 224 320 224C355.3 224 384 195.3 384 160C384 124.7 355.3 96 320 96V96z" />
+                                                    </svg></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock body %}

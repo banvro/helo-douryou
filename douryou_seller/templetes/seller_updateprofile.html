@@ -1,0 +1,563 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}Update Profile{% endblock title %}
+{% block body %}
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Update Profile</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Profile</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<form class="needs-validation" method="post" action="seller-edit-profile" enctype='multipart/form-data' novalidate>
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Contact Perosn information..</div>
+                </div>
+                <div class="card-body">
+                    <div class="text-center chat-image mb-5">
+                        <div class="col-lg-12 col-sm-12 mb-4 mb-lg-0">
+                            <input type="file" class="dropify" src="{{updateprofieid.ContactPersonPic}}"
+                                name="ContactPersonPic" id="ContactPersonPic" data-bs-height="180"
+                                data-default-file="/media/{{updateprofieid.ContactPersonPic}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Contact Perosn Name</label>
+                        <input type="text" class="form-control" placeholder="contact Perosn Name"
+                            name="ContactPersonName" value="{{updateprofieid.ContactPersonName}}" required>
+                        <div class="invalid-feedback">Please provide the information.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Contact Number</label>
+                        <input type="text" class="form-control" placeholder="Contact person Contact Number"
+                            name="ContactPersonNumber" value="{{updateprofieid.ContactPersonNumber}}" required>
+                        <div class="invalid-feedback">Please provide the Contact Number.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Desigation</label>
+                        <input type="text" class="form-control" placeholder="Contact Person Desigation"
+                            name="ContactPersonDesigation" value="{{updateprofieid.ContactPersonDesigation}}" required>
+                        <div class="invalid-feedback">Please provide the valid Desigation.</div>
+                    </div>
+                </div>
+                <!-- <div class="card-footer text-end">
+                    <a href="javascript:void(0)" class="btn btn-primary">Update</a>
+                    <a href="javascript:void(0)" class="btn btn-danger">Cancel</a>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Edit Companny Profile</h3>
+                </div>
+                <div class="card-body">
+                    <div class="text-center chat-image mb-5">
+                        <div class="col-lg-12 col-sm-12 mb-4 mb-lg-0">
+                            <input type="file" class="dropify" src="{{updateprofieid.CompanyLogo}}" name="CompanyLogo"
+                                id="CompanyLogo" data-bs-height="180"
+                                data-default-file="/media/{{updateprofieid.CompanyLogo}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Company Name</label>
+                        <input type="text" class="form-control" placeholder="Company Name" name="CompanyName"
+                            value="{{updateprofieid.CompanyName}}" required>
+                        <div class="invalid-feedback">Please provide valid Company Name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputnumber">Company Address</label>
+                        <input type="text" class="form-control" name="CompanyAddress" placeholder="Companny Address"
+                            value="{{updateprofieid.CompanyAddress}}" required>
+                        <div class="invalid-feedback">Please provide valid Company Address..</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Company E-mail Id</label>
+                        <input type="email" class="form-control" placeholder="Company Email id" name="CompanyEmailID"
+                            value="{{updateprofieid.CompanyEmailID}}" required>
+                        <div class="invalid-feedback">Please provide valid Company email id.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Company Website Link</label>
+                        <input type="url" class="form-control" placeholder="Company website link"
+                            name="CompanyWebsiteLink" value="{{updateprofieid.CompanyWebsiteLink}}" required>
+                        <div class="invalid-feedback">Please provide valid Company website link.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label for="exampleInputname">State Name</label>
+                                <input type="text" class="form-control" name="CompanyStateName"
+                                    placeholder="Company State Name" value="{{updateprofieid.CompanyStateName}}"
+                                    required>
+                                <div class="invalid-feedback">Please provide valid Company State Name.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label for="exampleInputname1">Company District Name</label>
+                                <input type="text" class="form-control" name="CompanyDistrictName"
+                                    placeholder="Company District Name" value="{{updateprofieid.CompanyDistrictName}}"
+                                    required>
+                                <div class="invalid-feedback">Please provide valid Company District Name.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputnumber">Login Contact Number</label>
+                        <input type="number" class="form-control" id="exampleInputnumber" placeholder="Contact number"
+                            name="CompanyLoginPhoneNo" value="{{updateprofieid.CompanyLoginPhoneNo}}" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">About Company</label>
+                        <textarea class="form-control" rows="3" value="{{updateprofieid.AboutCompany}}"
+                            name="AboutCompany" required>{{updateprofieid.AboutCompany}}</textarea>
+                        <div class="invalid-feedback">Please provide valid About Company info..</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Specialization Of Company</label>
+                        <textarea class="form-control" rows="2" value="{{updateprofieid.SpecializationOfCompany}}"
+                            name="SpecializationOfCompany"
+                            required>{{updateprofieid.SpecializationOfCompany}}</textarea>
+                        <div class="invalid-feedback">Please provide valid About Specialization info..</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Images section..</div>
+            </div>
+
+            <section>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            
+                            <div class="card-body" style="    border: 1px solid #100e0e; border-radius: 10px;">
+                                <div class="panel panel-primary">
+                                    <div class="tab-menu-heading tab-menu-heading-boxed">
+                                        <div class="tabs-menu-boxed">
+                                            <!-- Tabs -->
+                                            <ul class="nav panel-tabs justify-content-evenly">
+                                                <li><a href="#tab25" class="active" data-bs-toggle="tab"><img src="/static/images/image-douryou/online-advertising 1.png" alt="douryou_images"></a></li>
+                                                <li><a href="#tab26" data-bs-toggle="tab"><img src="/static/images/image-douryou/online-advertising 5.png" alt="douryou_images"></a></li>
+                                                <li><a href="#tab29" data-bs-toggle="tab"><img src="/static/images/image-douryou/icon/online-advertising 5 (1).png" alt="douryou_images"></a></li>
+                                                <li><a href="#tab30" data-bs-toggle="tab"><img src="/static/images/image-douryou/online-advertising 3.png" alt="douryou_images"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body tabs-menu-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tab25">
+                                                <div class="demo-gallery ">
+                                                    
+                                                    <div class="card-body">
+                                                        <ul id="" class="list-unstyled row">
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic1}}"
+                                                                        name="OfficePic1" id="OfficePic1" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic1}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic2}}"
+                                                                        name="OfficePic2" id="OfficePic2" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic2}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic3}}"
+                                                                        name="OfficePic3" id="OfficePic3" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic3}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic4}}"
+                                                                        name="OfficePic4" id="OfficePic4" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic4}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic5}}"
+                                                                        name="OfficePic5" id="OfficePic5" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic5}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic6}}"
+                                                                        name="OfficePic6" id="OfficePic6" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic6}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic7}}"
+                                                                        name="OfficePic7" id="OfficePic7" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic7}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic8}}"
+                                                                        name="OfficePic8" id="OfficePic8" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic8}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic9}}"
+                                                                        name="OfficePic9" id="OfficePic9" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic9}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic10}}"
+                                                                        name="OfficePic10" id="OfficePic10" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic10}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic11}}"
+                                                                        name="OfficePic11" id="OfficePic11" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic11}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.OfficePic12}}"
+                                                                        name="OfficePic12" id="OfficePic12" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.OfficePic12}}" />
+                                                                </div>
+                                                            </li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="tab-pane" id="tab26">
+                                                <div class="demo-gallery ">
+                                                    
+                                                    <div class="card-body">
+                                                        <ul id="" class="list-unstyled row">
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic1}}"
+                                                                        name="CompanyCertificationPic1" id="CompanyCertificationPic1" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic1}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic2}}"
+                                                                        name="CompanyCertificationPic2" id="CompanyCertificationPic2" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic2}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic3}}"
+                                                                        name="CompanyCertificationPic3" id="CompanyCertificationPic3" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic3}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic4}}"
+                                                                        name="CompanyCertificationPic4" id="CompanyCertificationPic4" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic4}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic5}}"
+                                                                        name="CompanyCertificationPic5" id="CompanyCertificationPic5" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic5}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic6}}"
+                                                                        name="CompanyCertificationPic6" id="CompanyCertificationPic6" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic6}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic7}}"
+                                                                        name="CompanyCertificationPic7" id="CompanyCertificationPic7" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic7}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic8}}"
+                                                                        name="CompanyCertificationPic8" id="CompanyCertificationPic8" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic8}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic9}}"
+                                                                        name="CompanyCertificationPic9" id="CompanyCertificationPic9" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic9}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic10}}"
+                                                                        name="CompanyCertificationPic10" id="CompanyCertificationPic10" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic10}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic11}}"
+                                                                        name="CompanyCertificationPic11" id="CompanyCertificationPic11" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic11}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyCertificationPic12}}"
+                                                                        name="CompanyCertificationPic12" id="CompanyCertificationPic12" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyCertificationPic12}}" />
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="tab-pane" id="tab29">
+                                                <div class="demo-gallery ">
+                                                    
+                                                    <div class="card-body">
+                                                        <ul id="" class="list-unstyled row">
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic1}}"
+                                                                        name="CompanyPreviousResultsPic1" id="CompanyPreviousResultsPic1" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic1}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic2}}"
+                                                                        name="CompanyPreviousResultsPic2" id="CompanyPreviousResultsPic2" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic2}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic3}}"
+                                                                        name="CompanyPreviousResultsPic3" id="CompanyPreviousResultsPic3" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic3}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic4}}"
+                                                                        name="CompanyPreviousResultsPic4" id="CompanyPreviousResultsPic4" data-bs-height="180"
+                                                                            data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic4}}" />
+                                                                    </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic5}}"
+                                                                        name="CompanyPreviousResultsPic5" id="CompanyPreviousResultsPic5" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic5}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic6}}"
+                                                                        name="CompanyPreviousResultsPic6" id="CompanyPreviousResultsPic6" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic6}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic7}}"
+                                                                        name="CompanyPreviousResultsPic7" id="CompanyPreviousResultsPic7" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic7}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic8}}"
+                                                                        name="CompanyPreviousResultsPic8" id="CompanyPreviousResultsPic8" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic8}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic9}}"
+                                                                        name="CompanyPreviousResultsPic9" id="CompanyPreviousResultsPic9" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic9}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic10}}"
+                                                                        name="CompanyPreviousResultsPic10" id="CompanyPreviousResultsPic10" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic10}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic11}}"
+                                                                        name="CompanyPreviousResultsPic11" id="CompanyPreviousResultsPic11" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic11}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CompanyPreviousResultsPic12}}"
+                                                                        name="CompanyPreviousResultsPic12" id="CompanyPreviousResultsPic12" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CompanyPreviousResultsPic12}}" />
+                                                                </div>
+                                                            </li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab-pane" id="tab30">
+                                                <div class="demo-gallery ">
+                                                    
+                                                    <div class="card-body">
+                                                        <ul id="" class="list-unstyled row">
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic1}}"
+                                                                        name="CustomerReviewsPic1" id="CustomerReviewsPic1" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic1}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic2}}"
+                                                                        name="CustomerReviewsPic2" id="CustomerReviewsPic2" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic2}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic3}}"
+                                                                        name="CustomerReviewsPic3" id="CustomerReviewsPic3" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic3}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12 ">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic4}}"
+                                                                        name="CustomerReviewsPic4" id="CustomerReviewsPic4" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic4}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic5}}"
+                                                                        name="CustomerReviewsPic5" id="CustomerReviewsPic5" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic5}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic6}}"
+                                                                        name="CustomerReviewsPic6" id="CustomerReviewsPic6" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic6}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic7}}"
+                                                                        name="CustomerReviewsPic7" id="CustomerReviewsPic7" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic7}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic8}}"
+                                                                        name="CustomerReviewsPic8" id="CustomerReviewsPic8" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic8}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic9}}"
+                                                                        name="CustomerReviewsPic9" id="CustomerReviewsPic9" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic9}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic10}}"
+                                                                        name="CustomerReviewsPic10" id="CustomerReviewsPic10" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic10}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic11}}"
+                                                                        name="CustomerReviewsPic11" id="CustomerReviewsPic11" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic11}}" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="col-xs-6 col-sm-4 col-md-4 col-xl-3 mb-5 border-bottom-0">
+                                                                <div class="col-lg-12">
+                                                                    <input type="file" class="dropify" src="{{updateprofieid.CustomerReviewsPic12}}"
+                                                                        name="CustomerReviewsPic12" id="CustomerReviewsPic12" data-bs-height="180"
+                                                                        data-default-file="/media/{{updateprofieid.CustomerReviewsPic12}}" />
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: 44%; margin-bottom: 24px;">
+                    <button class="btn btn-primary" type="submit" style="padding: 9px; padding-left: 18px; padding-right: 18px;">Update</button>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+
+    
+</form>
+<!-- ROW-1 CLOSED -->
+{% endblock body %}

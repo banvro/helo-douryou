@@ -1,0 +1,18 @@
+{% extends 'createprofile_base.html' %}
+{% block title %}Payment{% endblock title %}
+{% block body %}
+<!--Row open-->
+
+
+<h1>payment page</h1>
+<br>
+<br>
+<br>
+<br>
+<a href="seller-dashbord-view-ads">go to seller dashboard</a>
+
+<form action="payment-getway-buy-plan" method="post">{% csrf_token %}
+    <input type="submit" class="btn btn-secondary mb-5 mt-5 rounded-0 fs-16" value="Pay the Ammount" name="plan">
+</form>
+
+{% endblock body %}

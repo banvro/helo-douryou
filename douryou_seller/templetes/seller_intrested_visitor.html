@@ -1,0 +1,258 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}Intersted Visitor{% endblock title %}
+{% block body %}
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Intersted Visitor</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Intersted Visitor</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->    
+<!-- <div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+
+                    
+                
+                </div>
+            </div>             
+        </div>
+
+    </div>
+</div> -->
+<!-- ROW OPEN -->
+<div class="row">
+    {% for i in userintrest%}
+    {% if i ==  'IELTS' %}
+    <a href="seller-dashbord-Intersted-Visitor-IELTS"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fa-solid fa-graduation-cap text-danger fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">IELTS</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Study Visa' %}
+    <a href="seller-dashbord-Intersted-Visitor-Study-Visa"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fa-solid fa-cc-visa text-danger fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Study Visa</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Passport' %}
+    <a href="seller-dashbord-Intersted-Visitor-Passport"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-car text-secondary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Passport</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Education Loan' %}
+    <a href="seller-dashbord-Intersted-Visitor-Education-Loan"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-user text-secondary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Education Loan</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Travel Insurance' %}
+    <a href="seller-dashbord-Intersted-Visitor-Trevel-Insurance"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-plane text-secondary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Travel Insurance</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'International Matrimonial' %}
+    <a href="seller-dashbord-Intersted-Visitor-Trevel-Insurance"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-plane text-secondary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">International Matrimonial</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Money Exchange' %}
+    <a href="seller-dashbord-Intersted-Visitor-Money-Exchange"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-money text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Money Exchange</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Air Ticket' %}
+    <a href="seller-dashbord-Intersted-Visitor-Air-Ticket"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-plane text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Air Ticket</h2>
+            </div>
+        </div>
+    </div></a>
+    <!-- COL END -->
+    {% elif i ==  'Transport For Airport' %}
+    <a href="seller-dashbord-Intersted-Visitor-Transport-for-Airport"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-truck text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Transport For Airport</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Luggage Adjustment' %}
+    <a href="seller-dashbord-Intersted-Visitor-Transport-for-Airport"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-truck text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Luggage Adjustment</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Tourist & Business Visa' %}
+    <a href="seller-dashbord-Intersted-Visitor-Tourist-or-Business-visa"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-id-card text-danger fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Tourist & Business Visa</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Work Permit' %}
+    <a href="seller-dashbord-Intersted-Visitor-Work-Permit"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-briefcase text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Work Permit</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Jobs at Abroad' %}
+    <a href="seller-dashbord-Intersted-Visitor-Jobs at-Abroad"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-vcard-o text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Jobs at Abroad</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Accommodation at Abroad' %}
+    <a href="seller-dashbord-Intersted-Visitor-Accommodation-at-Abroad"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-american-sign-language-interpreting text-primary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Accommodation at Abroad</h2>
+            </div>
+        </div>
+    </div></a>
+    <!-- COL END -->
+    {% elif i ==  'Permanent Resident (PR)' %}
+    <a href="seller-dashbord-Intersted-Visitor-Permanent-Resident"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-check-circle text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Permanent Resident (PR)</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Tour Travel Package' %}
+    <a href="seller-dashbord-Intersted-Visitor-Tour-or-Travel-Package"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-bus text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Tour & Travel Package</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'International Courier' %}
+    <a href="seller-dashbord-Intersted-Visitor-International-Courier"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-inbox text-primary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">International Courier</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Legal Adviser' %}
+    <a href="seller-dashbord-Intersted-Visitor-Legal-Advisor"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-legal text-danger fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Legal Adviser</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Online IELTS Classes' %}
+    <a href="seller-dashbord-Intersted-Visitor-Onliine-IELTS-Class"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-ravelry text-secondary fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Online IELTS Classes</h2>
+            </div>
+        </div>
+    </div></a>
+    
+    <!-- COL END -->
+    {% elif i ==  'Online Weekly IELTS Test' %}
+    <a href="seller-dashbord-Intersted-Visitor-Online-Weekly-IELTS-Test"><div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fad fa-clipboard text-success fa-3x"></i>
+                <h2 class="mb-2 number-font" style="margin-top: 24px;">Online Weekly IELTS Test </h2>
+            </div>
+        </div>
+    </div></a>
+    {% endif %}
+    {% endfor %}
+</div>
+<!-- ROW CLOSED -->
+
+
+{% endblock body %}

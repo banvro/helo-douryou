@@ -1,0 +1,100 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}Add Today’s Deals{% endblock title %}
+{% block body %}
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Add Today’s Deals</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add Today’s Deals</li>
+        </ol>
+    </div>
+</div> 
+
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title"> Today’s Deal</h4>
+            </div>
+            <div class="card-body">
+                <form class="form-horizontal needs-validation"  method="POST" action= "seller-dashbord-add-todays-deals" id="myForm" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    <div class=" row mb-4">
+                        <label class="col-md-3 form-label">Choose Category :</label>
+                        <div class="col-md-9">
+                            <select name="category" class="form-control form-select select2" required>
+                                <option selected disabled value=""> ---Please Select Category---</option>
+                                <option value="ILETS"> ILETS</option>
+                                <option value="Passport">Passport</option>
+                                <option value="Study Visa">Study Visa</option>
+                                <option value="Education Loan">Education Loan</option>
+                                <option value="Air Ticket">Air Ticket</option>
+                                <option value="Travel Insurance">Travel Insurance</option>
+                                <option value="Money Exchange">Money Exchange</option>
+                                <option value="Transportation">Transportation</option>
+                                <option value="Luggage adjustment">Luggage adjustment</option>
+                                <option value="Accomodation at Abroad">Accomodation at Abroad</option>
+                                <option value="Jobs Abroad">Jobs Abroad</option>
+                                <option value="Tours and Travels">Tours and Travels</option>
+                                <option value="Work Permit">Work Permit</option>
+                                <option value="Permanent Residence">Permanent Residence</option>
+                                <option value="Tourism and Business Visa">Tourism and Business Visa</option>
+                                <!-- <option value="Event">Event</option> -->
+                                <!-- <option value="Job Requirement">Job Requirement</option> -->
+                                <option value="International Courier">International Courier</option>
+                                <option value="Legal advisor">Legal advisor</option>
+                                <option value="Online ILETS classes">Online ILETS classes</option>
+                                <option value="Franchise">Franchise</option>
+                                <option value="Check Your score ">Check Your score</option>
+                                <option value="International Matrimonial">International Matrimonial</option>
+                        </select> 
+                        <div class="invalid-feedback">Please select a valid Category .</div>
+                        </div>
+                    </div> 
+                    <div class=" row mb-4">
+                        <label class="col-md-3 form-label" for="Title">Add Title </label>
+                        <div class="col-md-9">
+                            <input type="text" id="title" name="title" class="form-control" placeholder="Describe something about your title" required>
+                            <div class="invalid-feedback">Please Enter your deals Title.</div>
+                        </div>
+                    </div>
+                    <!-- <div class=" row mb-4">
+                        <label class="col-md-3 form-label">Add Post Date & Time :</label>
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="fa fa-calendar tx-16 lh-0 op-6"></i>
+                                </div><input class="form-control fc-datepicker" name="timetogo" placeholder="MM/DD/YYYY" type="text">
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class=" row mb-4">
+                        <label class="col-md-3 form-label">Add Discription</label>
+                        <div class="col-md-9">
+                            <textarea type="text" name="dec" id="dec" class="form-control" placeholder="Add Discription.." style="height: 130px;" required></textarea>
+                            <div class="invalid-feedback">Please provide a atractive Discription of ads.</div>
+                        </div>
+                    </div>
+                    
+                    <div class=" row mb-4">
+                        <label class="col-md-3 form-label">Upload Ads Photo :</label>
+                        <div class="col-md-9">
+                            <input type="file" class="dropify" name="AdsPic" id="AdsPic" data-bs-height="180" required>
+                            <div class="invalid-feedback">upload ads banner..</div>
+                        </div>
+                    </div>
+
+                    <div class="" style="display: flex; justify-content: center;">
+                        <button class="btn btn-primary" type="submit" style=" margin-top: 20px;   padding: 8px; text-align: center; padding-left: 26px; padding-right: 26px; background-color: blue !important;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

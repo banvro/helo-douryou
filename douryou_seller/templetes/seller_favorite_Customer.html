@@ -1,0 +1,530 @@
+{% extends 'seller_dashbord_base.html' %}
+{% block title %}Favorite Customer{% endblock title %}
+{% block body %}
+<!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+
+<style>
+    .fa-heart-o {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: red;
+  cursor: pointer;
+}
+
+
+</style>
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Favorite Customer</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Seller Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Favorite Customer</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->    
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="" ></i><svg style="width: 37px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"/></svg></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class=""></i><svg style="width: 37px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M285.4 197.1L191.3 244.1C191.8 248 191.1 251.1 191.1 256C191.1 260 191.8 263.1 191.3 267.9L285.4 314.9C302.6 298.2 326.1 288 352 288C405 288 448 330.1 448 384C448 437 405 480 352 480C298.1 480 256 437 256 384C256 379.1 256.2 376 256.7 372.1L162.6 325.1C145.4 341.8 121.9 352 96 352C42.98 352 0 309 0 256C0 202.1 42.98 160 96 160C121.9 160 145.4 170.2 162.6 186.9L256.7 139.9C256.2 135.1 256 132 256 128C256 74.98 298.1 32 352 32C405 32 448 74.98 448 128C448 181 405 224 352 224C326.1 224 302.6 213.8 285.4 197.1L285.4 197.1z"/></svg></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-5">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="" ></i><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg style="width: 44px;" enable-background="new 0 0 128 128" id="Social_Icons" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x34__stroke"><g id="Facebook_Messenger_1_"><rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="20" width="20"/><path clip-rule="evenodd" d="M70.36,79.802L54.062,62.42    L22.261,79.802l34.981-37.136l16.696,17.383l31.404-17.383L70.36,79.802z M64,0C28.654,0,0,26.531,0,59.259    c0,18.649,9.307,35.283,23.851,46.146V128l21.791-11.96c5.816,1.609,11.977,2.478,18.358,2.478c35.346,0,64-26.531,64-59.259    S99.346,0,64,0z" fill="#007FFF" fill-rule="evenodd" id="Facebook_Messenger"/></g></g></svg></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class=""><?xml version="1.0" ?><svg style="width: 44px;" data-name="Layer 1" id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.707,11.293l-8-8A.99991.99991,0,0,0,12,4V7.54492A11.01525,11.01525,0,0,0,2,18.5V20a1,1,0,0,0,1.78418.62061,11.45625,11.45625,0,0,1,7.88672-4.04932c.0498-.00635.1748-.01611.3291-.02588V20a.99991.99991,0,0,0,1.707.707l8-8A.99962.99962,0,0,0,21.707,11.293ZM14,17.58594V15.5a.99974.99974,0,0,0-1-1c-.25488,0-1.2959.04932-1.56152.085A14.00507,14.00507,0,0,0,4.05176,17.5332,9.01266,9.01266,0,0,1,13,9.5a.99974.99974,0,0,0,1-1V6.41406L19.58594,12Z" fill="#6563ff"/></svg></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12  col-xl-6">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/static/images/users/stuavtar.png" class="card-img-left h-40" alt="img" style="    padding: 19px; margin-left: 12px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body" style="margin-bottom: -45px;">
+                                    <form class="form-horizontal">
+                                        
+                                        <div  class="mb-0 row justify-content-end">
+                                            <div class="col-md-3" style="font-size: 25px;">
+                                                <span id = heart  style="display: flex; justify-content: flex-end;"><i class="fa fa-heart-o" aria-hidden="true" style="display: flex; justify-content: flex-end;"></i> </span>
+                                            </div>
+                                        </div>
+
+                                        <div class=" row mb-4">
+                                            <h5><strong>Name&emsp;&emsp;</strong> : &emsp; naresh</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>E-mail ID&ensp;</strong> : &emsp; naresh@gmail.com</h5>
+                                        </div>
+                                        <div class=" row mb-4">
+                                            <h5><strong>Dist. Name</strong> : &emsp; Chandigarh</h5>
+                                        </div>
+                                        <div class="mb-0 row justify-content-end"  style="    margin-top: -30px;">
+                                            <div class="col-md-4">
+                                                <a href=""  style="font-size: 37px; margin-top: -14px; margin-right: 7px;"><i class="fa fa-commenting-o" ></i></a>
+                                                <a href=""  style="font-size: 29px; margin-top: -14px;"><i class="icon icon-share"></i></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="    margin-left: 15px;
+                        width: 96%;
+                        padding: 2px;
+                        background-color: blue;
+                        color: white;
+                        margin-bottom: -1px; border-bottom-left-radius: 17px; border-bottom-right-radius: 17px;">
+                            <h6 style="    margin-top: 6px; margin-left: 17px;"><b>Share Interview Date & Time :-</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+<!-- /Row -->
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+  $("#heart").click(function(){
+    if($("#heart").hasClass("liked")){
+      $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+      $("#heart").removeClass("liked");
+    }else{
+      $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+      $("#heart").addClass("liked");
+    }
+  });
+});
+</script>
+
+{% endblock body %}

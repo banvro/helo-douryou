@@ -1,0 +1,283 @@
+{% extends 'createprofile_base.html' %}
+{% block title %}Create Company Profile{% endblock title %}
+{% block body %}
+<!--Row open-->
+<style>
+    :root {
+        --first-color: #08526d;
+        --second-color: #ec1c23;
+    }
+
+    /* Start price Cards */
+    section.price-card {
+        background-color: rgb(255, 255, 255);
+        padding-bottom: 90px;
+
+    }
+
+    section.price-card header h2 {
+        color: #000;
+        text-transform: capitalize;
+        padding-top: 60px;
+        padding-bottom: 30px;
+
+    }
+
+    section.price-card header p {
+        width: 60%;
+        color: #757575;
+        margin: -10px auto 55px;
+
+    }
+
+    section.price-card div.card-t {
+        background-color: #fff;
+        margin-right: 34px;
+        padding: 0;
+        box-shadow: 7px 7px 16px 0px #ddd,
+            -7px -7px 16px 0px #ddd;
+        margin-bottom: 20px;
+    }
+
+    section.price-card div.card-t:last-of-type {
+        margin-right: 0;
+    }
+
+    section.price-card div.card-t.col-lg-4 {
+        max-width: 31.333333%;
+    }
+
+    section.price-card div.card-t h3 {
+        color: var(--first-color);
+        padding-top: 50px;
+    }
+
+    section.price-card div.card-t p:first-of-type {
+        color: #757575;
+        margin-bottom: 25px;
+    }
+
+    section.price-card div.card-t p:last-of-type {
+        color: var(--first-color);
+        background-color: #f7f7f7;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    section.price-card div.card-t p span {
+        font-size: 15px;
+    }
+
+    section.price-card div.card-t ul {
+        margin-top: 30px;
+    }
+
+    section.price-card div.card-t ul li {
+        color: #000000;
+        margin-bottom: 6px;
+        text-align: left;
+    }
+
+    section.price-card div.card-t button {
+        background-color: var(--second-color);
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding: 10px 45px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+
+    }
+
+    section.price-card div.card-t:not(hover) {
+        transition: all .5s ease-in-out;
+
+    }
+
+    section.price-card div.card-t:hover {
+        transition: all .5s ease-in-out;
+        transform: scale(1.1, 1.1);
+        cursor: pointer;
+
+    }
+
+    section.price-card div.card-t:not(hover) p:last-of-type {
+        transition: all .5s ease-in-out;
+
+    }
+
+    section.price-card div.card-t:hover p:last-of-type {
+        background-color: var(--second-color);
+        color: #fff;
+        transition: all .5s ease-in-out;
+
+    }
+
+    section.price-card div.card-t button:hover {
+        background-color: var(--first-color);
+    }
+
+    .listunorder {
+        margin-bottom: -14px;
+    background-color: #4ccaef33;
+    border: 2px solid #a0b4d8;
+    border-radius: 14px;
+    }
+
+    /* End price Cards */
+</style>
+<!--Row-->
+<div class="row ">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header border-bottom-0">
+                <div class="card-title">
+                    Buy Your Plans/ create your company profile
+                </div>
+            </div>
+            <div class="card-body" style="padding: 0px;">
+
+
+                <!-- Start Price Cards note hover not work in md bt h3 -->
+                <section class="price-card text-center" style="padding:27px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card-t">
+                                    <h3 style="text-align: center;"><strong><u>PORFENSSIONAL</u></strong></h3>
+                                    <p style="text-align: center; color: blue;">Package Valid For 1 Month</p>
+                                    <p style="text-align: center; margin-bottom: 0px;">Price - 7000/<span> + 18% GST</span></p>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <ul class="list-group" style="margin-top: -33px;">
+                                                <ul class="listunorder">
+                                                    <li>Full Details : About us, Specialization, Contact
+                                                        Person Name, Deshigation with Pics, 5 Videos of
+                                                        10 Mintus each,Office Pics, Yours certifications, Previous results & Customers reviews.  </li>
+                                                    <li>Douryou Chat Unlimited</li>
+                                                    <li>Douryou Notifications Unlimited</li>
+                                                    <li>Sell Franchise Unlimited</li>
+                                                    <li>Offer Jobs Unlimited</li>
+                                                </ul>
+                                                <ul class="listunorder">
+                                                    <li>Bydefult 5 Star Rating</li>
+                                                    <li>20 Ads Publish in all Area’s</li>
+                                                    <li>Listing all Categories/li>
+                                                    <li>Top Listing</li>
+                                                    <li>Inbound leads From all Area’s</li>
+                                                    <li>Intersted Visitor </li>
+                                                </ul>
+                                                <ul class="listunorder">
+                                                    <li>User’s Requirments From all Area’s</li>
+                                                    <li>My Match Acording to my Specialzation form all Area’s</li>
+                                                    <li>Marketing Intelligence(Hot Prospects Identification through Artificial Intelligence)from all Area’s</li>        
+                                                </ul>
+                                                <ul class="listunorder">
+                                                    <li>1 Interview Publish in all Area’s</li>
+                                                    <li>Top Banner for 1 Months</li>
+                                                    <li>Lead Share of PR Customers</li>
+                                                    <li>Data Share of online weekly IELTS Test</li>
+                                                    <li>Discount 10% off on promosational Events stall</li>
+                                                    <li>Hot Area to target Customers</li>
+                                                </ul>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- <a href="payment-getway-buy-plan"><button style="text-align: center;">buy now</button></a> -->
+                                    <form action="seller-create-profile-buy-Your-plan" method="post">{% csrf_token %}
+                                        <input type="submit" class="btn btn-danger mb-5 mt-5 rounded-0 fs-16" value="Buy Professional Plan" name="professional">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card-t">
+                                    <h3 style="text-align: center;"><strong><u>BUSINESS</u></strong></h3>
+                                    <p style="text-align: center; color: blue;">Package Valid For 1 Month</p>
+                                    <p style="text-align: center; margin-bottom: 0px;">Price - 5000/<span> + 18% GST</span></p>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <ul class="list-group" style="margin-top: -33px;">
+                                                <ul class="listunorder">
+                                                    <li>Full Details : About us, Specialization, Contact
+                                                        Person Name, Deshigation with Pics, 5 Videos of
+                                                        10 Mintus each,Office Pics, Yours certifications, Previous results & Customers reviews.  </li>
+                                                    <li>Douryou Chat Unlimited</li>
+                                                    <li>Douryou Notifications Unlimited</li>
+                                                    <li>Sell Franchise Unlimited</li>
+                                                    <li>Offer Jobs Unlimited</li>
+                                                </ul>
+                                                <ul class="listunorder">
+                                                    <li>Bydefult 5 Star Rating</li>
+                                                    <li>20 Ads Publish in all Area’s</li>
+                                                    <li>Listing all Categories/li>
+                                                    <li>Top Listing</li>
+                                                    <li>Inbound leads From all Area’s</li>
+                                                    <li>Intersted Visitor </li>
+                                                </ul>
+                                                <ul class="listunorder">
+                                                    <li>User’s Requirments From all Area’s</li>
+                                                    <li>My Match Acording to my Specialzation form all Area’s</li>
+                                                    <li>Marketing Intelligence(Hot Prospects Identification through Artificial Intelligence)from all Area’s</li>        
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- <a href="payment-getway-buy-plan"><button style="text-align: center;">buy now</button></a> -->
+                                    <form action="seller-create-profile-buy-Your-plan" method="post">{% csrf_token %}
+                                        <input type="submit" class="btn btn-danger mb-5 mt-5 rounded-0 fs-16" value="Buy Business Plan" name="professional">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card-t">
+                                    <h3 style="text-align: center;"><strong><u>ULTIMATE</u></strong></h3>
+                                    <p style="text-align: center; color: blue;">Package Valid For 1 Month</p>
+                                    <p style="text-align: center; margin-bottom: 0px;">Price - 3000/<span> + 18% GST</span></p>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <ul class="list-group" style="margin-top: -33px;">
+                                                <ul class="listunorder">
+                                                    <li>Full Details : About us, Specialization, Contact
+                                                        Person Name, Deshigation with Pics, 5 Videos of
+                                                        10 Mintus each,Office Pics, Yours certifications, Previous results & Customers reviews.  </li>
+                                                    <li>Douryou Chat Unlimited</li>
+                                                    <li>Douryou Notifications Unlimited</li>
+                                                    <li>Sell Franchise Unlimited</li>
+                                                    <li>Offer Jobs Unlimited</li>
+                                                </ul>
+                                                <ul class="listunorder">
+                                                    <li>Bydefult 5 Star Rating</li>
+                                                    <li>20 Ads Publish in all Area’s</li>
+                                                    <li>Listing all Categories/li>
+                                                    <li>Top Listing</li>
+                                                    <li>Inbound leads From all Area’s</li>
+                                                    <li>Intersted Visitor </li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- <a href="payment-getway-buy-plan"><button style="text-align: center;">buy now</button></a> -->
+                                    <form action="seller-create-profile-buy-Your-plan" method="post">{% csrf_token %}
+                                        <input type="submit" class="btn btn-danger mb-5 mt-5 rounded-0 fs-16" value="Buy Ultimate Plan" name="professional">
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <!-- End Price Cards -->
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

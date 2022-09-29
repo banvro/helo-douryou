@@ -1,0 +1,132 @@
+{% extends 'admin_base.html' %}
+{% block title %}Add New Video{% endblock title %}
+{% block body %}
+<style>
+    section {
+        padding: 50px 0;
+    }
+
+    .col-form {
+        position: relative;
+        max-width: 100%;
+        min-height: 80px;
+        border: 1px solid black;
+        border-radius: 12px;
+        background-color: #fff;
+        padding: 10px 50px 0 15px;
+    }
+</style>
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title">Add New Video</h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Admin Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add New Video</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->
+<div class="row ">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12  col-xl-12">
+                <div class="card">
+
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <form class="needs-validation" action="admin-add-new-video" method="post"  novalidate>
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="video_name" id="videoname"
+                                                    placeholder="Video Name"
+                                                    style="border: 1px solid #000000; border-radius: 13px;" required>
+                                                    <div class="invalid-feedback">Please Enter your Video Name.</div>
+                                                   
+                                                <label for="floatingInput">Video Name</label>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="category_name" id="
+                                                    categoryname" placeholder="Category Name"
+                                                    style="border: 1px solid #000000; border-radius: 13px;" required>
+                                                    <div class="invalid-feedback">Please Enter your Category Name.</div>
+                                                <label for="floatingInput">Category Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="video_title"
+                                                    id="videotitle" placeholder="Video Title"
+                                                    style="border: 1px solid #000000; border-radius: 13px;" required>
+                                                    <div class="invalid-feedback">Please Enter your Video Title.</div>
+                                                <label for="floatingInput">Video Title</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="select_seller"
+                                                    id="selectseller" placeholder="Select Seller"
+                                                    style="border: 1px solid #000000; border-radius: 13px;" required>
+                                                    <div class="invalid-feedback">Select Seller.</div>
+                                                <label for="floatingInput">Select Seller </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="video_link" id="videolink"
+                                                    placeholder="Video link"
+                                                    style="border: 1px solid #000000; border-radius: 13px;" required>
+                                                    <div class="invalid-feedback">Provide video link.</div>
+                                                <label for="floatingInput">Video link </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="thumbnail_link"
+                                                    id="thumbnaillink" placeholder="Thumbnail link"
+                                                    style="border: 1px solid #000000; border-radius: 13px;" required>
+                                                    <div class="invalid-feedback">Provide Thumbnail link.</div>
+                                                <label for="floatingInput">Thumbnail link </label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-6 justify-content-end" style=" display: flex;">
+                                                <button type="button" class="btn btn-primary btn-lg mx-5"
+                                                    style="padding:7px 50px ;">Go back</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="submit" vlaue="send" class="btn btn-primary btn-lg mx-5"
+                                                    style="padding:7px 50px ;">Submit</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock body %}
